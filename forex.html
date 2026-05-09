@@ -1,0 +1,804 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="海外FX取引所の比較・一覧。主要ブローカーのスペックとアフィリエイトリンクをまとめています。" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="img/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ─── FOREX PAGE STYLES ─────────────────── */
+
+    .fx-hero {
+      padding: 64px 48px 48px;
+      border-bottom: var(--border);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .fx-hero-eyebrow {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      padding: 7px 16px;
+      margin-bottom: 24px;
+    }
+
+    .fx-hero h1 {
+      font-size: clamp(40px, 7vw, 88px);
+      font-weight: 800;
+      line-height: 0.92;
+      letter-spacing: -0.03em;
+      margin-bottom: 24px;
+    }
+
+    .fx-hero h1 span {
+      color: var(--yellow);
+    }
+
+    .fx-hero-sub {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.7;
+      color: #aaa;
+      max-width: 560px;
+    }
+
+    /* ─── STATS BAR ─────────────────────────── */
+    .fx-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-bottom: var(--border);
+    }
+
+    .fx-stat {
+      padding: 28px 40px;
+      border-right: var(--border);
+    }
+
+    .fx-stat:last-child {
+      border-right: none;
+    }
+
+    .fx-stat-num {
+      font-size: 40px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .fx-stat-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: #666;
+    }
+
+    /* ─── FILTER BAR ────────────────────────── */
+    .fx-filter-bar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 20px 48px;
+      border-bottom: var(--border);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+
+    .fx-filter-bar::-webkit-scrollbar { display: none; }
+
+    .fx-filter-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+      margin-right: 4px;
+    }
+
+    .fx-filter-btn {
+      padding: 8px 18px;
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      border: 2px solid var(--black);
+      background: var(--white);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.12s, color 0.12s;
+    }
+
+    .fx-filter-btn.active,
+    .fx-filter-btn:hover {
+      background: var(--black);
+      color: var(--white);
+    }
+
+    /* ─── BROKER GRID ───────────────────────── */
+    .fx-brokers {
+      padding: 56px 48px;
+      border-bottom: var(--border);
+    }
+
+    .broker-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+    }
+
+    .broker-card {
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      background: var(--white);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .broker-card-head {
+      padding: 24px 28px 20px;
+      border-bottom: var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .broker-name {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
+    }
+
+    .broker-reg {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      border: 2px solid var(--black);
+      padding: 4px 8px;
+      white-space: nowrap;
+      margin-top: 4px;
+    }
+
+    .broker-badge {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      padding: 5px 10px;
+      background: var(--black);
+      color: var(--yellow);
+    }
+
+    .broker-card-body {
+      padding: 24px 28px;
+      flex: 1;
+    }
+
+    .broker-specs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px 20px;
+      margin-bottom: 20px;
+    }
+
+    .spec-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .spec-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: #777;
+    }
+
+    .spec-value {
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1;
+    }
+
+    .spec-value.highlight {
+      color: var(--black);
+    }
+
+    .broker-bonus {
+      font-size: 13px;
+      font-weight: 600;
+      line-height: 1.55;
+      padding: 12px 16px;
+      border: 2px solid var(--black);
+      background: var(--yellow);
+      margin-bottom: 20px;
+    }
+
+    .broker-bonus strong {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      margin-bottom: 4px;
+    }
+
+    .broker-card-foot {
+      padding: 0 28px 28px;
+    }
+
+    .broker-cta {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-decoration: none;
+      background: var(--black);
+      color: var(--white);
+      border: var(--border);
+      box-shadow: var(--shadow);
+      transition: transform 0.1s, box-shadow 0.1s;
+      cursor: pointer;
+    }
+
+    .broker-cta:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 8px 8px 0 var(--black);
+    }
+
+    .broker-cta:active {
+      transform: translate(5px, 5px);
+      box-shadow: none;
+    }
+
+    .broker-cta.cta--yellow {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    /* ─── COMPARISON TABLE ──────────────────── */
+    .fx-table-section {
+      padding: 56px 48px;
+      border-bottom: var(--border);
+      overflow-x: auto;
+    }
+
+    .fx-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 700px;
+      font-size: 14px;
+    }
+
+    .fx-table th {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-align: left;
+      padding: 14px 20px;
+      border: var(--border);
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .fx-table td {
+      padding: 14px 20px;
+      border: var(--border);
+      font-weight: 600;
+      vertical-align: middle;
+    }
+
+    .fx-table tr:nth-child(even) td {
+      background: #f8f8ee;
+    }
+
+    .fx-table tr:hover td {
+      background: var(--yellow);
+    }
+
+    .fx-table .td-name {
+      font-size: 15px;
+      font-weight: 800;
+    }
+
+    .table-link {
+      display: inline-block;
+      padding: 6px 14px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      background: var(--black);
+      color: var(--yellow);
+      border: 2px solid var(--black);
+      transition: background 0.1s, color 0.1s;
+    }
+
+    .table-link:hover {
+      background: var(--yellow);
+      color: var(--black);
+    }
+
+    .tag-bonus {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      background: var(--cyan);
+      border: 2px solid var(--black);
+    }
+
+    /* ─── DISCLAIMER ────────────────────────── */
+    .fx-disclaimer {
+      padding: 32px 48px;
+      background: #f4f4e8;
+      border-bottom: var(--border);
+    }
+
+    .fx-disclaimer p {
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 1.8;
+      color: #555;
+      max-width: 900px;
+    }
+
+    .fx-disclaimer strong {
+      color: var(--black);
+    }
+
+    /* ─── RESPONSIVE ─────────────────────────── */
+    @media (max-width: 840px) {
+      .fx-hero {
+        padding: 48px 24px 36px;
+      }
+
+      .fx-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .fx-stat {
+        border-right: none;
+        border-bottom: var(--border);
+        padding: 20px 24px;
+      }
+
+      .fx-stat:last-child {
+        border-bottom: none;
+      }
+
+      .fx-filter-bar {
+        padding: 16px 24px;
+      }
+
+      .fx-brokers {
+        padding: 40px 24px;
+      }
+
+      .broker-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .fx-table-section {
+        padding: 40px 24px;
+      }
+
+      .fx-disclaimer {
+        padding: 24px;
+      }
+    }
+  </style>
+  <title>海外FX 比較 | Yui Kikuchi</title>
+</head>
+<body>
+
+  <header class="site-header">
+    <span class="header-logo">YK.</span>
+    <nav class="header-nav">
+      <a href="/">PORTFOLIO</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="fx-hero">
+    <div class="fx-hero-eyebrow">海外FX 比較ガイド</div>
+    <h1>OVERSEAS<br><span>FX</span> BROKERS</h1>
+    <p class="fx-hero-sub">
+      主要な海外FX取引所のスペックを比較。レバレッジ・スプレッド・ボーナス・規制を一覧でチェック。
+    </p>
+  </section>
+
+  <!-- STATS -->
+  <div class="fx-stats">
+    <div class="fx-stat">
+      <div class="fx-stat-num">6</div>
+      <div class="fx-stat-label">BROKERS LISTED</div>
+    </div>
+    <div class="fx-stat">
+      <div class="fx-stat-num">1:2000</div>
+      <div class="fx-stat-label">MAX LEVERAGE</div>
+    </div>
+    <div class="fx-stat">
+      <div class="fx-stat-label" style="margin-top:8px">最終更新</div>
+      <div class="fx-stat-num" style="font-size:22px;margin-top:6px">2025.05</div>
+    </div>
+  </div>
+
+  <!-- FILTER -->
+  <div class="fx-filter-bar">
+    <span class="fx-filter-label">FILTER:</span>
+    <button class="fx-filter-btn active">すべて</button>
+    <button class="fx-filter-btn">高ボーナス</button>
+    <button class="fx-filter-btn">高レバレッジ</button>
+    <button class="fx-filter-btn">低スプレッド</button>
+    <button class="fx-filter-btn">日本語サポート</button>
+  </div>
+
+  <!-- BROKER CARDS -->
+  <section class="fx-brokers">
+    <h2 class="section-title">
+      <span class="section-title-num">01</span>
+      ブローカー一覧
+    </h2>
+
+    <div class="broker-grid">
+
+      <!-- XM -->
+      <div class="broker-card">
+        <div class="broker-card-head">
+          <div>
+            <div class="broker-name">XM Trading</div>
+            <div class="broker-reg">CySEC / FSC / ASIC</div>
+          </div>
+          <div class="broker-badge">人気 No.1</div>
+        </div>
+        <div class="broker-card-body">
+          <div class="broker-specs">
+            <div class="spec-item">
+              <span class="spec-label">最大レバレッジ</span>
+              <span class="spec-value highlight">1:1000</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">最低入金額</span>
+              <span class="spec-value">$5</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">EUR/USD スプレッド</span>
+              <span class="spec-value">1.6 pips</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">日本語サポート</span>
+              <span class="spec-value">◎</span>
+            </div>
+          </div>
+          <div class="broker-bonus">
+            <strong>ボーナス情報</strong>
+            口座開設ボーナス $30（入金不要）＋<br>初回入金100%ボーナス（最大$500）
+          </div>
+        </div>
+        <div class="broker-card-foot">
+          <a href="#" class="broker-cta cta--yellow" target="_blank" rel="noopener sponsored">
+            XM Trading で口座開設 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- Exness -->
+      <div class="broker-card">
+        <div class="broker-card-head">
+          <div>
+            <div class="broker-name">Exness</div>
+            <div class="broker-reg">FCA / CySEC / FSA</div>
+          </div>
+          <div class="broker-badge">超高レバレッジ</div>
+        </div>
+        <div class="broker-card-body">
+          <div class="broker-specs">
+            <div class="spec-item">
+              <span class="spec-label">最大レバレッジ</span>
+              <span class="spec-value highlight">無制限</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">最低入金額</span>
+              <span class="spec-value">$10</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">EUR/USD スプレッド</span>
+              <span class="spec-value">0.3 pips</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">日本語サポート</span>
+              <span class="spec-value">◎</span>
+            </div>
+          </div>
+          <div class="broker-bonus">
+            <strong>ボーナス情報</strong>
+            入金ボーナスなし（スプレッド還元型）<br>スプレッドの低さが強み
+          </div>
+        </div>
+        <div class="broker-card-foot">
+          <a href="#" class="broker-cta" target="_blank" rel="noopener sponsored">
+            Exness で口座開設 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- TitanFX -->
+      <div class="broker-card">
+        <div class="broker-card-head">
+          <div>
+            <div class="broker-name">TitanFX</div>
+            <div class="broker-reg">VFSC</div>
+          </div>
+          <div class="broker-badge">低スプレッド</div>
+        </div>
+        <div class="broker-card-body">
+          <div class="broker-specs">
+            <div class="spec-item">
+              <span class="spec-label">最大レバレッジ</span>
+              <span class="spec-value highlight">1:500</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">最低入金額</span>
+              <span class="spec-value">$200</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">EUR/USD スプレッド</span>
+              <span class="spec-value">0.0 pips</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">日本語サポート</span>
+              <span class="spec-value">○</span>
+            </div>
+          </div>
+          <div class="broker-bonus">
+            <strong>ボーナス情報</strong>
+            紹介ボーナスあり<br>Zeroスプレッド口座が人気
+          </div>
+        </div>
+        <div class="broker-card-foot">
+          <a href="#" class="broker-cta" target="_blank" rel="noopener sponsored">
+            TitanFX で口座開設 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- BigBoss -->
+      <div class="broker-card">
+        <div class="broker-card-head">
+          <div>
+            <div class="broker-name">BigBoss</div>
+            <div class="broker-reg">FSA Seychelles</div>
+          </div>
+          <div class="broker-badge">1:2000</div>
+        </div>
+        <div class="broker-card-body">
+          <div class="broker-specs">
+            <div class="spec-item">
+              <span class="spec-label">最大レバレッジ</span>
+              <span class="spec-value highlight">1:2000</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">最低入金額</span>
+              <span class="spec-value">$10</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">EUR/USD スプレッド</span>
+              <span class="spec-value">1.5 pips</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">日本語サポート</span>
+              <span class="spec-value">◎</span>
+            </div>
+          </div>
+          <div class="broker-bonus">
+            <strong>ボーナス情報</strong>
+            口座開設ボーナス $30＋取引ごとにProfit Share還元<br>ゼロカット採用
+          </div>
+        </div>
+        <div class="broker-card-foot">
+          <a href="#" class="broker-cta cta--yellow" target="_blank" rel="noopener sponsored">
+            BigBoss で口座開設 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- IS6FX -->
+      <div class="broker-card">
+        <div class="broker-card-head">
+          <div>
+            <div class="broker-name">IS6FX</div>
+            <div class="broker-reg">SVGFSA</div>
+          </div>
+          <div class="broker-badge">日本向け</div>
+        </div>
+        <div class="broker-card-body">
+          <div class="broker-specs">
+            <div class="spec-item">
+              <span class="spec-label">最大レバレッジ</span>
+              <span class="spec-value highlight">1:1000</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">最低入金額</span>
+              <span class="spec-value">$0</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">EUR/USD スプレッド</span>
+              <span class="spec-value">1.6 pips</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">日本語サポート</span>
+              <span class="spec-value">◎</span>
+            </div>
+          </div>
+          <div class="broker-bonus">
+            <strong>ボーナス情報</strong>
+            入金100%ボーナス（継続）<br>入金不要ボーナスキャンペーンあり
+          </div>
+        </div>
+        <div class="broker-card-foot">
+          <a href="#" class="broker-cta" target="_blank" rel="noopener sponsored">
+            IS6FX で口座開設 ↗
+          </a>
+        </div>
+      </div>
+
+      <!-- AXIORY -->
+      <div class="broker-card">
+        <div class="broker-card-head">
+          <div>
+            <div class="broker-name">AXIORY</div>
+            <div class="broker-reg">IFSC Belize</div>
+          </div>
+          <div class="broker-badge">低スプレッド</div>
+        </div>
+        <div class="broker-card-body">
+          <div class="broker-specs">
+            <div class="spec-item">
+              <span class="spec-label">最大レバレッジ</span>
+              <span class="spec-value highlight">1:777</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">最低入金額</span>
+              <span class="spec-value">$10</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">EUR/USD スプレッド</span>
+              <span class="spec-value">0.4 pips</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">日本語サポート</span>
+              <span class="spec-value">○</span>
+            </div>
+          </div>
+          <div class="broker-bonus">
+            <strong>ボーナス情報</strong>
+            入金ボーナスなし（低スプレッド重視）<br>Nanoアカウントで超低スプレッド
+          </div>
+        </div>
+        <div class="broker-card-foot">
+          <a href="#" class="broker-cta" target="_blank" rel="noopener sponsored">
+            AXIORY で口座開設 ↗
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="fx-table-section">
+    <h2 class="section-title">
+      <span class="section-title-num">02</span>
+      スペック比較表
+    </h2>
+    <table class="fx-table">
+      <thead>
+        <tr>
+          <th>ブローカー</th>
+          <th>最大レバレッジ</th>
+          <th>最低入金</th>
+          <th>EUR/USD</th>
+          <th>ボーナス</th>
+          <th>規制</th>
+          <th>リンク</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="td-name">XM Trading</td>
+          <td>1:1000</td>
+          <td>$5</td>
+          <td>1.6 pips</td>
+          <td><span class="tag-bonus">入金不要 $30</span></td>
+          <td>CySEC / FSC</td>
+          <td><a href="#" class="table-link" target="_blank" rel="noopener sponsored">開設 ↗</a></td>
+        </tr>
+        <tr>
+          <td class="td-name">Exness</td>
+          <td>無制限</td>
+          <td>$10</td>
+          <td>0.3 pips</td>
+          <td>—</td>
+          <td>FCA / CySEC</td>
+          <td><a href="#" class="table-link" target="_blank" rel="noopener sponsored">開設 ↗</a></td>
+        </tr>
+        <tr>
+          <td class="td-name">TitanFX</td>
+          <td>1:500</td>
+          <td>$200</td>
+          <td>0.0 pips</td>
+          <td>—</td>
+          <td>VFSC</td>
+          <td><a href="#" class="table-link" target="_blank" rel="noopener sponsored">開設 ↗</a></td>
+        </tr>
+        <tr>
+          <td class="td-name">BigBoss</td>
+          <td>1:2000</td>
+          <td>$10</td>
+          <td>1.5 pips</td>
+          <td><span class="tag-bonus">入金不要 $30</span></td>
+          <td>FSA Seychelles</td>
+          <td><a href="#" class="table-link" target="_blank" rel="noopener sponsored">開設 ↗</a></td>
+        </tr>
+        <tr>
+          <td class="td-name">IS6FX</td>
+          <td>1:1000</td>
+          <td>$0</td>
+          <td>1.6 pips</td>
+          <td><span class="tag-bonus">入金100%</span></td>
+          <td>SVGFSA</td>
+          <td><a href="#" class="table-link" target="_blank" rel="noopener sponsored">開設 ↗</a></td>
+        </tr>
+        <tr>
+          <td class="td-name">AXIORY</td>
+          <td>1:777</td>
+          <td>$10</td>
+          <td>0.4 pips</td>
+          <td>—</td>
+          <td>IFSC</td>
+          <td><a href="#" class="table-link" target="_blank" rel="noopener sponsored">開設 ↗</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- DISCLAIMER -->
+  <div class="fx-disclaimer">
+    <p>
+      <strong>【広告・アフィリエイト開示】</strong>
+      本ページのリンクにはアフィリエイトリンクが含まれており、経由して口座開設された場合に報酬を受け取ることがあります。
+      掲載情報は執筆時点のものであり、最新情報はブローカー公式サイトをご確認ください。
+      FX取引はリスクを伴います。余剰資金の範囲内でご利用ください。
+      本ページは特定の取引所への投資を推奨するものではありません。
+    </p>
+  </div>
+
+  <footer class="site-footer">
+    <span>© 2024 Yui Kikuchi</span>
+    <span>海外FX 比較ガイド</span>
+  </footer>
+
+  <script>
+    // Filter button interaction (visual only)
+    document.querySelectorAll('.fx-filter-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.fx-filter-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
