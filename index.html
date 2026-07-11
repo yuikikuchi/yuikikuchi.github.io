@@ -1,136 +1,451 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Yui Kikuchi — Software Engineer" />
-  <meta property="og:url" content="https://yuikikuchi.github.io" />
-  <meta property="og:title" content="Yui Kikuchi" />
-  <meta property="og:description" content="Software Engineer. Building web products." />
-  <meta property="og:image" content="img/profile.jpg" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Yui Kikuchi">
-  <meta name="twitter:description" content="Software Engineer. Building web products.">
-  <meta name="twitter:image" content="img/profile.jpg">
-  <link rel="icon" href="img/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <title>Yui Kikuchi</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>システム開発 実績ポートフォリオ</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/theme/white.css">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+<div class="reveal">
+<div class="slides">
 
-  <header class="site-header">
-    <span class="header-logo">YK.</span>
-    <nav class="header-nav">
-      <a href="#works">WORKS</a>
-      <a href="#contact">CONTACT</a>
-    </nav>
-  </header>
+<!-- Slide 1: Title -->
+<section data-background="var(--black)" data-transition="fade">
+  <div style="text-align: center;">
+    <i data-lucide="server" class="ic ic-white anim-fade" style="width:32px;height:32px;stroke-width:0.6;margin-bottom:16px;color:rgba(255,255,255,0.15);"></i>
+    <p class="anim-fade" style="font-size: 0.65em; color: rgba(255,255,255,0.25); letter-spacing: 0.25em; text-transform: uppercase;">System Development Partner</p>
+    <div class="hr-thick-white anim-fade d1"></div>
+    <h1 class="anim-up d2" style="color: #fff; font-size: 2.8em; font-weight: 200;">
+      AI <span style="font-weight:900;">builder</span>
+    </h1>
+    <div class="hr-thick-white anim-fade d3"></div>
+    <p class="anim-fade d4" style="color: rgba(255,255,255,0.4); font-size: 0.75em; margin-top: 20px;">
+      要件定義・設計・開発・テスト・保守運用 ／ SES・準委任・請負対応
+    </p>
+    <p class="anim-fade d5" style="color: rgba(255,255,255,0.2); font-size: 0.55em; margin-top: 36px; letter-spacing: 0.1em;">
+      Yui Kikuchi ｜ システムエンジニア（フリーランス）
+    </p>
+  </div>
+</section>
 
-  <section class="hero">
-    <div class="hero-left">
-      <div class="hero-badge">SOFTWARE ENGINEER</div>
-      <h1 class="hero-name">YUI<br>KIKUCHI</h1>
-      <p class="hero-bio">
-        Building web products with clean code<br>and mobile-first thinking.
+<!-- Slide 2: Self-intro -->
+<section data-transition="fade">
+  <div class="cat-label anim-fade">About</div>
+  <h2 class="anim-up">自己紹介</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-2" style="margin-top: 18px;">
+    <div class="anim-up d2">
+      <p style="font-size: 0.68em; line-height: 1.9;">
+        システム開発の実務経験<strong style="color:var(--black);">10年</strong>。<br>
+        SIer案件を中心に、要件定義から保守運用までを<br>
+        <strong style="color:var(--black);">一気通貫</strong>で対応してきた実務経験があります。<br>
+        エンタープライズ向けの大規模基幹システムでも、
+        <strong style="color:var(--black);">品質・納期・報連相</strong>を徹底できる体制で稼働します。
       </p>
-      <div class="hero-links">
-        <a href="https://github.com/yuikikuchi" target="_blank" rel="noopener" class="btn btn--black">GitHub</a>
-        <a href="https://www.linkedin.com/in/yuikikuchi" target="_blank" rel="noopener" class="btn btn--yellow">LinkedIn</a>
-        <a href="https://www.facebook.com/yui.kikuchi.93" target="_blank" rel="noopener" class="btn btn--outline">Facebook</a>
-      </div>
     </div>
-    <div class="hero-right">
-      <div class="hero-img-frame">
-        <img src="img/profile.jpg" alt="Yui Kikuchi" class="hero-img">
-        <div class="hero-img-shadow"></div>
+    <div class="anim-up d3">
+      <div class="lc" style="margin-bottom: 10px;">
+        <div class="num">10</div>
+        <div class="num-label">Years of Experience</div>
+        <p>システム開発 実務経験年数</p>
       </div>
-      <div class="hero-tag-box">
-        <span>TOKYO</span>
-        <span>JAPAN</span>
+      <div class="lc">
+        <div class="num">8+</div>
+        <div class="num-label">Projects Joined</div>
+        <p>参画プロジェクト数</p>
       </div>
-    </div>
-  </section>
-
-  <div class="ticker" aria-hidden="true">
-    <div class="ticker-track">
-      <span>SOFTWARE ENGINEER</span><span class="ticker-dot">★</span>
-      <span>WEB DEVELOPER</span><span class="ticker-dot">★</span>
-      <span>MOBILE FIRST</span><span class="ticker-dot">★</span>
-      <span>CLEAN CODE</span><span class="ticker-dot">★</span>
-      <span>SOFTWARE ENGINEER</span><span class="ticker-dot">★</span>
-      <span>WEB DEVELOPER</span><span class="ticker-dot">★</span>
-      <span>MOBILE FIRST</span><span class="ticker-dot">★</span>
-      <span>CLEAN CODE</span><span class="ticker-dot">★</span>
     </div>
   </div>
+</section>
 
-  <section class="works" id="works">
-    <h2 class="section-title">
-      <span class="section-title-num">01</span>
-      WORKS
-    </h2>
-    <div class="works-grid">
-
-      <a href="https://petsnavi.com/" target="_blank" rel="noopener" class="work-card work-card--yellow">
-        <div class="work-card-top">
-          <span class="work-card-tag">WEB SERVICE</span>
-          <span class="work-card-arrow">↗</span>
-        </div>
-        <h3 class="work-card-name">Petsnavi</h3>
-        <p class="work-card-desc">Pet information media serving pet owners across Japan.</p>
-        <div class="work-card-url">petsnavi.com</div>
-      </a>
-
-      <a href="https://smaholic.com/" target="_blank" rel="noopener" class="work-card work-card--cyan">
-        <div class="work-card-top">
-          <span class="work-card-tag">WEB SERVICE</span>
-          <span class="work-card-arrow">↗</span>
-        </div>
-        <h3 class="work-card-name">Smaholic</h3>
-        <p class="work-card-desc">Smartphone & gadget review media for mobile device enthusiasts.</p>
-        <div class="work-card-url">smaholic.com</div>
-      </a>
-
+<!-- Slide 3: Scope of work -->
+<section data-background="#f5f5f5" data-transition="fade">
+  <div class="cat-label anim-fade">Scope</div>
+  <h2 class="anim-up">対応可能な工程</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-3" style="margin-top: 16px;">
+    <div class="lc anim-up d2">
+      <i data-lucide="clipboard-list" class="ic-lg"></i>
+      <h4>要件定義</h4>
+      <p>業務ヒアリング・要件整理・要件定義書作成</p>
     </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <h2 class="section-title">
-      <span class="section-title-num">02</span>
-      FIND ME
-    </h2>
-    <div class="contact-grid">
-      <a href="https://github.com/yuikikuchi" target="_blank" rel="noopener" class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-        </div>
-        <span class="contact-label">GitHub</span>
-        <span class="contact-handle">@yuikikuchi</span>
-      </a>
-      <a href="https://www.linkedin.com/in/yuikikuchi" target="_blank" rel="noopener" class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </div>
-        <span class="contact-label">LinkedIn</span>
-        <span class="contact-handle">yuikikuchi</span>
-      </a>
-      <a href="https://www.facebook.com/yui.kikuchi.93" target="_blank" rel="noopener" class="contact-item">
-        <div class="contact-icon">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-        </div>
-        <span class="contact-label">Facebook</span>
-        <span class="contact-handle">yui.kikuchi.93</span>
-      </a>
+    <div class="lc anim-up d3">
+      <i data-lucide="layout-template" class="ic-lg"></i>
+      <h4>基本設計</h4>
+      <p>画面設計・機能設計・外部設計書作成</p>
     </div>
-  </section>
+    <div class="lc anim-up d4">
+      <i data-lucide="file-cog" class="ic-lg"></i>
+      <h4>詳細設計</h4>
+      <p>内部設計・DB設計・詳細設計書作成</p>
+    </div>
+    <div class="lc anim-up d5">
+      <i data-lucide="code-2" class="ic-lg"></i>
+      <h4>製造・単体テスト</h4>
+      <p>コーディング規約準拠・単体テスト仕様書/結果作成</p>
+    </div>
+    <div class="lc anim-up d6">
+      <i data-lucide="check-square" class="ic-lg"></i>
+      <h4>結合・総合テスト</h4>
+      <p>テストケース作成・実施・不具合管理</p>
+    </div>
+    <div class="lc anim-up d7">
+      <i data-lucide="wrench" class="ic-lg"></i>
+      <h4>保守・運用</h4>
+      <p>障害対応・改修・運用ドキュメント整備</p>
+    </div>
+  </div>
+</section>
 
-  <footer class="site-footer">
-    <span>© 2024 Yui Kikuchi</span>
-    <span>Software Engineer</span>
-  </footer>
+<!-- Slide 4: Contract conditions -->
+<section data-transition="fade">
+  <div class="cat-label anim-fade">Conditions</div>
+  <h2 class="anim-up">契約形態・稼働条件</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-2" style="margin-top: 14px;">
+    <div class="lc anim-up d2">
+      <h4>契約形態</h4>
+      <p>SES / 準委任契約 / 一括請負　いずれも対応可</p>
+    </div>
+    <div class="lc anim-up d3">
+      <h4>商流</h4>
+      <p>深い商流でも対応可。直接契約も相談可</p>
+    </div>
+    <div class="lc anim-up d4">
+      <h4>稼働形態</h4>
+      <p>リモート中心 / 客先常駐も相談可。週5日〜、月140h〜</p>
+    </div>
+    <div class="lc anim-up d5">
+      <h4>進捗・報告</h4>
+      <p>日報・週報対応、Backlog / Redmine / JIRA等の利用実績あり</p>
+    </div>
+  </div>
+</section>
 
+<!-- Slide 5: Chapter 1 -->
+<section data-background="var(--black)" data-transition="fade">
+  <div style="text-align: center;">
+    <p class="cat-label-dark anim-fade">Chapter 01</p>
+    <h1 class="anim-up d1" style="color: #fff; font-size: 2.6em; font-weight: 200;">上流工程<span style="font-weight:900;">対応実績</span></h1>
+    <div class="hr-thick-white anim-fade d2"></div>
+    <p class="anim-fade d3" style="color: rgba(255,255,255,0.4); font-size: 0.75em;">要件定義・基本設計フェーズからの参画</p>
+  </div>
+</section>
+
+<!-- Slide 6: Upstream achievements -->
+<section data-transition="fade">
+  <div class="cat-label anim-fade">Upstream</div>
+  <h2 class="anim-up">要件定義・設計の実績</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-2" style="margin-top: 14px;">
+    <div class="lc anim-up d2" style="border-left: 2px solid var(--black);">
+      <span class="tag">官公庁</span>
+      <h4>ホストマイグレーション 要件定義支援</h4>
+      <p>現行業務フローのヒアリングから要件定義書・RFP対応資料を作成。体制：100名規模 / 役割：アーキテクト</p>
+    </div>
+    <div class="lc anim-up d3" style="border-left: 2px solid var(--black);">
+      <span class="tag">金融</span>
+      <h4>基幹システム モダナイゼーション</h4>
+      <p>画面設計書・機能設計書を規定フォーマットで作成。レビュー指摘対応まで一貫して対応</p>
+    </div>
+    <div class="lc anim-up d4" style="border-left: 2px solid var(--black);">
+      <span class="tag">官公庁</span>
+      <h4>レガシーシステム クラウドリフト</h4>
+      <p>現行機能分析・技術選定・クラウド環境でのPoC、入札に向けたRFP作成</p>
+    </div>
+    <div class="lc anim-up d5" style="border-left: 2px solid var(--black);">
+      <span class="tag">生保</span>
+      <h4>移行要件の整理</h4>
+      <p>既存システムのリプレース案件で、移行対象・移行方式・切替手順の要件を整理</p>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 7: Chapter 2 -->
+<section data-background="var(--black)" data-transition="fade">
+  <div style="text-align: center;">
+    <p class="cat-label-dark anim-fade">Chapter 02</p>
+    <h1 class="anim-up d1" style="color: #fff; font-size: 2.6em; font-weight: 200;">開発<span style="font-weight:900;">・テスト</span></h1>
+    <div class="hr-thick-white anim-fade d2"></div>
+    <p class="anim-fade d3" style="color: rgba(255,255,255,0.4); font-size: 0.75em;">規約遵守と品質担保を両立した製造工程</p>
+  </div>
+</section>
+
+<!-- Slide 8: Dev achievements -->
+<section data-background="#f5f5f5" data-transition="fade">
+  <div class="cat-label anim-fade">Development</div>
+  <h2 class="anim-up">開発・テスト実績</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-2" style="margin-top: 14px;">
+    <div class="lc anim-up d2">
+      <span class="tag">EC</span>
+      <h4>業務システム 新規開発</h4>
+      <p>詳細設計書に基づく製造・単体テスト。コーディング規約 / レビュー体制に準拠</p>
+    </div>
+    <div class="lc anim-up d3">
+      <span class="tag">小売</span>
+      <h4>既存システム改修</h4>
+      <p>影響範囲調査 → 改修 → 回帰テストまで対応。障害の再発防止策を提案</p>
+    </div>
+    <div class="lc anim-up d5">
+      <span class="tag">小売</span>
+      <h4>基盤・インフラ構築支援</h4>
+      <p>環境構築・デプロイ自動化・監視設定など、開発基盤まわりの整備を支援</p>
+    </div>
+    <div class="lc anim-up d4">
+      <span class="tag">金融</span>
+      <h4>結合テスト・総合テスト支援</h4>
+      <p>テストケース設計・実施・不具合管理表の運用。テスト消化率の可視化に貢献</p>
+    </div>
+  </div>
+  <p class="anim-fade d6" style="font-size: 0.55em; color: var(--light); margin-top: 12px;">
+    その他: 帳票出力改修、API連携開発、バッチ処理開発 等 複数件
+  </p>
+</section>
+
+<!-- Slide 9: Before/After -->
+<section data-background="linear-gradient(180deg, #eee 0%, #fafafa 100%)" data-transition="fade">
+  <div class="cat-label anim-fade">Quality Impact</div>
+  <h2 class="anim-up">参画前 vs 参画後</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="ba-grid anim-up d2">
+    <div class="ba-box before">
+      <h3><i data-lucide="x-circle" class="ic" style="width:14px;height:14px;color:var(--faint);margin-right:4px;"></i>Before</h3>
+      <p>仕様書とソースの乖離が放置<br>単体テストの証跡が不十分<br>結合テストで手戻り多発<br>属人化した保守対応</p>
+    </div>
+    <div class="ba-arrow"><i data-lucide="arrow-right" class="ic" style="width:24px;height:24px;"></i></div>
+    <div class="ba-box after">
+      <h3><i data-lucide="check-circle" class="ic" style="width:14px;height:14px;color:var(--black);margin-right:4px;"></i>After</h3>
+      <p>設計書とソースの整合性を復元<br>テストエビデンスを規定様式で整備<br>影響範囲分析で手戻りを削減<br>保守手順書を整備し属人化を解消</p>
+    </div>
+  </div>
+  <p class="anim-fade d3" style="font-size: 0.6em; color: var(--light); margin-top: 14px; text-align: center;">
+    結合テスト工程での手戻り件数: <strong style="color:var(--black);">大幅削減</strong>
+  </p>
+</section>
+
+<!-- Slide 10: Chapter 3 -->
+<section data-background="var(--black)" data-transition="fade">
+  <div style="text-align: center;">
+    <p class="cat-label-dark anim-fade">Chapter 03</p>
+    <h1 class="anim-up d1" style="color: #fff; font-size: 2.6em; font-weight: 200;">保守<span style="font-weight:900;">・運用</span></h1>
+    <div class="hr-thick-white anim-fade d2"></div>
+    <p class="anim-fade d3" style="color: rgba(255,255,255,0.4); font-size: 0.75em;">止められないシステムを支える運用対応</p>
+  </div>
+</section>
+
+<!-- Slide 11: Maintenance achievements -->
+<section data-transition="fade">
+  <div class="cat-label anim-fade">Maintenance</div>
+  <h2 class="anim-up">保守・運用実績</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-2" style="margin-top: 14px;">
+    <div class="lc anim-up d2" style="border-left: 2px solid var(--black);">
+      <i data-lucide="alert-triangle" class="ic-lg"></i>
+      <h4>障害対応・一次切り分け</h4>
+      <p>本番障害発生時の一次切り分け、原因調査、復旧対応、報告書作成</p>
+    </div>
+    <div class="lc anim-up d3" style="border-left: 2px solid var(--black);">
+      <i data-lucide="repeat" class="ic-lg"></i>
+      <h4>定期リリース対応</h4>
+      <p>月次・週次のリリース作業、リリース手順書作成、切り戻し対応</p>
+    </div>
+    <div class="lc anim-up d4" style="border-left: 2px solid var(--black);">
+      <i data-lucide="file-text" class="ic-lg"></i>
+      <h4>運用ドキュメント整備</h4>
+      <p>運用手順書・障害対応マニュアルの整備、属人化の解消</p>
+    </div>
+    <div class="lc anim-up d5" style="border-left: 2px solid var(--black);">
+      <i data-lucide="bar-chart-3" class="ic-lg"></i>
+      <h4>監視・アラート対応</h4>
+      <p>死活監視・リソース監視の設定、アラート発生時の一次対応フロー構築</p>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 12: Security & Governance -->
+<section data-background="#f5f5f5" data-transition="fade">
+  <div class="cat-label anim-fade">Security &amp; Governance</div>
+  <h2 class="anim-up">情報管理・セキュリティ対応</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-3" style="margin-top: 16px;">
+    <div class="lc anim-up d2">
+      <i data-lucide="shield-check" class="ic-lg"></i>
+      <h4>秘密保持・情報管理</h4>
+      <p>NDA締結を前提とした対応。客先の情報取扱規程を遵守</p>
+    </div>
+    <div class="lc anim-up d3">
+      <i data-lucide="lock" class="ic-lg"></i>
+      <h4>セキュリティ規定への準拠</h4>
+      <p>客先の開発環境・セキュリティ規定に応じた作業端末/VPN等の対応</p>
+    </div>
+    <div class="lc anim-up d4">
+      <i data-lucide="file-check-2" class="ic-lg"></i>
+      <h4>監査・証跡対応</h4>
+      <p>作業ログ・レビュー記録・テストエビデンスなど監査対応可能な証跡を整備</p>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 13: Tech Stack -->
+<section data-background="linear-gradient(180deg, #eee 0%, #fafafa 100%)" data-transition="fade">
+  <div class="cat-label anim-fade">Tech Stack</div>
+  <h2 class="anim-up">使用技術</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-3" style="margin-top: 14px;">
+    <div class="lc anim-up d2">
+      <h4>言語</h4>
+      <p>Java, COBOL, Go, Python, React(TypeScript)</p>
+    </div>
+    <div class="lc anim-up d3">
+      <h4>フレームワーク</h4>
+      <p>Spring, SpringBoot, Next.js</p>
+    </div>
+    <div class="lc anim-up d4">
+      <h4>DB</h4>
+      <p>Oracle, SQL Server, PostgreSQL, MySQL</p>
+    </div>
+    <div class="lc anim-up d5">
+      <h4>インフラ</h4>
+      <p>Windows Server, Linux, オンプレ, AWS, Azure</p>
+    </div>
+    <div class="lc anim-up d6">
+      <h4>ツール</h4>
+      <p>Git/Subversion, Backlog, Redmine, JIRA, Excel設計書運用</p>
+    </div>
+    <div class="lc anim-up d7">
+      <h4>開発手法</h4>
+      <p>ウォーターフォール / アジャイル 両対応</p>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 14: AI activity as differentiator -->
+<section data-transition="fade">
+  <div class="cat-label anim-fade">Differentiator</div>
+  <h2 class="anim-up">AI駆動開発</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-2" style="margin-top: 14px;">
+    <div class="lc anim-up d2">
+      <i data-lucide="file-search" class="ic-lg"></i>
+      <h4>コンテキストエンジニアリング</h4>
+      <p>既存のシステムやコードの文脈を理解し、より効果的な開発を実現</p>
+    </div>
+    <div class="lc anim-up d3">
+      <i data-lucide="check-square" class="ic-lg"></i>
+      <h4>既存コード・ドキュメントの解析</h4>
+      <p>生成AIを活用したレガシーコード解析・仕様書化で、調査工数を削減</p>
+    </div>
+    <div class="lc anim-up d4">
+      <i data-lucide="code" class="ic-lg"></i>
+      <h4>コーディング・コードレビュー支援</h4>
+      <p>規約準拠のコード生成・セルフレビューにAIを活用し、手戻りを削減</p>
+    </div>
+    <div class="lc anim-up d5">
+      <i data-lucide="file-text" class="ic-lg"></i>
+      <h4>ドキュメント整備の効率化</h4>
+      <p>議事録・報告書・運用手順書の作成をAI活用で効率化し、報告品質を担保</p>
+    </div>
+  </div>
+  <p class="anim-fade d6" style="font-size: 0.55em; color: var(--light); margin-top: 12px; text-align: center;">
+    あくまで「品質・納期を守るための効率化手段」として活用。成果物は既存の規約・体制に準拠
+  </p>
+</section>
+
+<!-- Slide 15: Why Us -->
+<section data-background="#f5f5f5" data-transition="fade">
+  <div class="cat-label anim-fade">Why Us</div>
+  <h2 class="anim-up">選ばれる理由</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="grid-3" style="margin-top: 14px;">
+    <div class="lc anim-up d2" style="border-left: 2px solid var(--black);">
+      <i data-lucide="shield" class="ic-lg"></i>
+      <h4>体制への適応力</h4>
+      <p>既存の開発体制・規約・レビュープロセスに合わせて稼働</p>
+    </div>
+    <div class="lc anim-up d3" style="border-left: 2px solid var(--black);">
+      <i data-lucide="message-square" class="ic-lg"></i>
+      <h4>報連相の徹底</h4>
+      <p>日報・週報・課題管理を確実に運用し、リスクの早期共有を徹底</p>
+    </div>
+    <div class="lc anim-up d4" style="border-left: 2px solid var(--black);">
+      <i data-lucide="zap" class="ic-lg"></i>
+      <h4>生成AI活用による効率化</h4>
+      <p>品質・納期を落とさずに調査・製造・ドキュメント作成のスピードを向上</p>
+    </div>
+  </div>
+  <div class="callout anim-up d5" style="margin-top: 16px;">
+    <p><strong>「一時的な増員」でも「特定工程だけの支援」でも対応可能です。</strong><br>
+    <span style="font-size:0.85em;">案件の規模・体制・商流に合わせて、柔軟な関わり方をご提案します。</span></p>
+  </div>
+</section>
+
+<!-- Slide 16: Flow -->
+<section data-transition="fade">
+  <div class="cat-label anim-fade">Process</div>
+  <h2 class="anim-up">ご発注までの流れ</h2>
+  <div class="hr-thick anim-fade d1"></div>
+  <div class="flow anim-up d2" style="justify-content: center; margin-top: 24px;">
+    <div class="flow-step" style="padding: 12px 18px;">
+      <i data-lucide="file-text" class="ic"></i>
+      <div class="label">スキルシート提出</div>
+      <div class="sub">案件概要のご共有</div>
+    </div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step" style="padding: 12px 18px;">
+      <i data-lucide="message-circle" class="ic"></i>
+      <div class="label">面談</div>
+      <div class="sub">オンライン / 対面</div>
+    </div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step" style="padding: 12px 18px;">
+      <i data-lucide="layout" class="ic"></i>
+      <div class="label">条件調整</div>
+      <div class="sub">契約形態・稼働条件</div>
+    </div>
+    <span class="flow-arrow">→</span>
+    <div class="flow-step" style="padding: 12px 18px;">
+      <i data-lucide="rocket" class="ic"></i>
+      <div class="label">契約・稼働開始</div>
+      <div class="sub">迅速対応</div>
+    </div>
+  </div>
+  <div class="callout anim-up d3" style="margin-top: 24px; text-align: center;">
+    <p style="font-size: 0.75em;"><strong>まずはスキルシートのご確認から。</strong><br>単発の工程支援から長期常駐まで、幅広くご相談に対応します。</p>
+  </div>
+</section>
+
+<!-- Slide 17: Q&A / Contact -->
+<section data-background="var(--black)" data-transition="fade">
+  <div style="text-align: center;">
+    <h1 style="color: #fff; font-size: 3em; font-weight: 200;" class="anim-up">
+      Q <span style="font-weight:900;">&amp;</span> A
+    </h1>
+    <div class="hr-thick-white anim-fade d1"></div>
+    <p class="anim-fade d2" style="color: rgba(255,255,255,0.4); font-size: 0.8em; margin-top: 16px;">
+      ご質問・ご相談はお気軽に
+    </p>
+    <div style="display: flex; justify-content: center; gap: 24px; margin-top: 30px;">
+      <div class="lc-dark anim-up d3" style="text-align: center; padding: 14px 20px;">
+        <i data-lucide="mail" class="ic-lg ic-white-bright"></i>
+        <h4>メール</h4>
+        <p>yui.kikuchi@yahoo.com</p>
+      </div>
+    </div>
+    <p class="anim-fade d6" style="color: rgba(255,255,255,0.2); font-size: 0.5em; margin-top: 30px; letter-spacing: 0.1em;">
+      Yui Kikuchi ｜ システムエンジニア（フリーランス）
+    </p>
+  </div>
+</section>
+
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/reveal.js@5.1.0/dist/reveal.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>
