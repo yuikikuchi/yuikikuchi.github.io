@@ -3,18 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>METASYSTEM｜ハーネスエンジニアリング × システムインテグレーション</title>
-<meta name="description" content="METASYSTEM は、AIエージェントを開発現場のルール・工程・既存システムへ結線する、ハーネスエンジニアリング専門の屋号です。エージェント開発環境の整備、SI工程への組み込み、レガシー解析・移行支援。現場スタッフ管理 SaaS「WORKURU」を開発・運用しています。">
+<title>METASYSTEM｜システム開発パートナー Yui Kikuchi の実績ポートフォリオ</title>
+<meta name="description" content="システムエンジニア Yui Kikuchi（屋号 METASYSTEM）の実績ポートフォリオ。実務経験10年、要件定義・設計・開発・テスト・保守運用まで対応。SES・準委任・請負。官公庁・金融・EC・小売の実績と、自作プロダクト（WORKURU・ペットナビ・smaholic・じゃ〜なる）をまとめています。">
 <meta name="author" content="Yui Kikuchi">
-<meta name="theme-color" content="#F2EFE6" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0B0E13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f5ede1">
 <link rel="canonical" href="https://yuikikuchi.github.io/">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yuikikuchi.github.io/">
 <meta property="og:site_name" content="METASYSTEM">
-<meta property="og:title" content="METASYSTEM｜AIを、現場に結線する。">
-<meta property="og:description" content="ハーネスエンジニアリング × システムインテグレーション。AIエージェントを、開発現場のルール・工程・既存システムへ結線します。">
+<meta property="og:title" content="METASYSTEM｜システム開発パートナー">
+<meta property="og:description" content="実務経験10年のシステムエンジニアの実績ポートフォリオ。要件定義から保守運用まで、SES・準委任・請負に対応します。">
 <meta property="og:image" content="https://yuikikuchi.github.io/assets/img/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -24,22 +23,11 @@
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-<script>
-/* 配色の好みを先に読む（描画の前に決めて、ちらつかせない） */
-(function () {
-  var d = document.documentElement;
-  d.classList.add('js');
-  try {
-    var t = localStorage.getItem('ms-theme');
-    if (t === 'light' || t === 'dark') d.setAttribute('data-theme', t);
-  } catch (e) {}
-})();
-</script>
-
+<script>document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Barlow+Semi+Condensed:wght@700&family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=M+PLUS+1+Code:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
 
 <script type="application/ld+json">
 {
@@ -47,427 +35,785 @@
   "@type": "ProfessionalService",
   "name": "METASYSTEM",
   "url": "https://yuikikuchi.github.io/",
-  "description": "AIエージェントを開発現場のルール・工程・既存システムへ結線する、ハーネスエンジニアリング専門の屋号。",
-  "founder": { "@type": "Person", "name": "Yui Kikuchi", "jobTitle": "Software Engineer", "sameAs": ["https://github.com/yuikikuchi"] },
-  "knowsAbout": ["ハーネスエンジニアリング", "AIエージェント", "システムインテグレーション", "レガシーマイグレーション"]
+  "description": "システム開発パートナー。要件定義・設計・開発・テスト・保守運用に対応するシステムエンジニアの屋号。",
+  "founder": { "@type": "Person", "name": "Yui Kikuchi", "jobTitle": "システムエンジニア", "sameAs": ["https://github.com/yuikikuchi"] }
 }
 </script>
 </head>
 <body>
+
+<!-- アイコン（線だけの絵）。使う所では <svg class="i"><use href="#i-名前"/></svg> と書く -->
+<svg class="defs" aria-hidden="true" focusable="false">
+  <symbol id="i-folder" viewBox="0 0 24 24"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-right" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-left" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></symbol>
+  <symbol id="i-out" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+  <symbol id="i-code" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M13 5l-2 14"/></symbol>
+  <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 3l2.8 5.8 6.2.8-4.5 4.4 1.1 6.2-5.6-3-5.6 3 1.1-6.2L3 9.6l6.2-.8z"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24"><circle cx="6" cy="18" r="2"/><circle cx="18" cy="6" r="2"/><path d="M6 16V9a3 3 0 0 1 3-3h7"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><rect x="6" y="5" width="12" height="16" rx="2"/><path d="M9 5a3 3 0 0 1 6 0M9 11h6M9 15h4"/></symbol>
+  <symbol id="i-term" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 9l3 3-3 3M13 15h4"/></symbol>
+  <symbol id="i-pulse" viewBox="0 0 24 24"><path d="M3 12h4l3-7 4 14 3-7h4"/></symbol>
+  <symbol id="i-swap" viewBox="0 0 24 24"><path d="M4 7h13M13 3l4 4-4 4M20 17H7M11 13l-4 4 4 4"/></symbol>
+  <symbol id="i-layers" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5zM3 13l9 5 9-5"/></symbol>
+  <symbol id="i-spark" viewBox="0 0 24 24"><path d="M11 3l1.8 5.2L18 10l-5.2 1.8L11 17l-1.8-5.2L4 10l5.2-1.8zM19 15v4M17 17h4"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.2 8-8 9-4.8-1-8-4.5-8-9V6z"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M3 8l9-5 9 5v8l-9 5-9-5zM3 8l9 5 9-5M12 13v8"/></symbol>
+  <symbol id="i-sliders" viewBox="0 0 24 24"><path d="M4 6h8M16 6h4M4 12h3M11 12h9M4 18h10M18 18h2"/><circle cx="14" cy="6" r="2"/><circle cx="9" cy="12" r="2"/><circle cx="16" cy="18" r="2"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a1 1 0 0 1 1-1h10"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+  <symbol id="i-idea" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+</svg>
+
 <a class="skip" href="#main">本文へ移動</a>
 
-<!-- ───────── 上の帯：コネクタのピン配列 ───────── -->
-<header class="nav" id="nav">
-  <a class="brand" href="#top" aria-label="METASYSTEM トップへ">
-    <svg class="brand__mark" viewBox="0 0 32 32" aria-hidden="true">
-      <rect class="m-bg" width="32" height="32" rx="6"/>
-      <path class="m-br" d="M12 8H8v16h4M20 8h4v16h-4"/>
-      <circle class="m-dot" cx="16" cy="16" r="3.5"/>
-    </svg>
-    <span class="brand__name">METASYSTEM</span>
+<!-- ───────── 上の帯 ───────── -->
+<header class="top">
+  <button class="top__menu" id="menu" type="button" aria-controls="side" aria-expanded="false" aria-label="ページの一覧を開く"><svg class="i"><use href="#i-menu"/></svg></button>
+  <a class="top__logo" href="#about" aria-label="METASYSTEM トップへ">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#1e1c19"/><path d="M12 9H9v14h3M20 9h3v14h-3" fill="none" stroke="#f5ede1" stroke-width="2.4" stroke-linecap="square"/><circle cx="16" cy="16" r="3.2" fill="#cbe4b0"/></svg>
+    <b>METASYSTEM</b>
   </a>
-  <nav class="pinout" aria-label="セクション">
-    <a href="#harness"><i>01</i><b>HARNESS</b></a>
-    <a href="#service"><i>02</i><b>SERVICE</b></a>
-    <a href="#product"><i>03</i><b>PRODUCT</b></a>
-    <a href="#ground"><i>04</i><b>GROUND</b></a>
-    <a href="#connect"><i>05</i><b>CONNECT</b></a>
+  <nav class="tabs" aria-label="主なページ">
+    <a href="#profile" data-tab="02"><svg class="i"><use href="#i-user"/></svg>プロフィール</a>
+    <a href="#upstream" data-tab="04"><svg class="i"><use href="#i-doc"/></svg>実績</a>
+    <a href="#stack" data-tab="05"><svg class="i"><use href="#i-layers"/></svg>スキル</a>
+    <a href="#workuru" data-tab="06"><svg class="i"><use href="#i-box"/></svg>プロダクト</a>
   </nav>
-  <div class="nav__tools">
-    <p class="meter" aria-hidden="true">通電 <b id="meter">000</b>%</p>
-    <button class="theme" id="theme" type="button" aria-label="配色を切り替える（昼の図面／夜の図面）">
-      <svg viewBox="0 0 20 20" aria-hidden="true"><circle cx="10" cy="10" r="7.2"/><path d="M10 2.8a7.2 7.2 0 0 1 0 14.4z"/></svg>
-    </button>
-  </div>
+  <a class="btn btn--go top__cta" href="#contact"><svg class="i"><use href="#i-mail"/></svg><span>お問い合わせ</span></a>
 </header>
 
-<div class="clip">
-<div class="sheet" id="sheet">
-  <svg class="wires wires--back" id="wiresBack" aria-hidden="true" focusable="false"></svg>
-  <canvas class="pulse pulse--trunk" id="pulseTrunk" aria-hidden="true"></canvas>
-  <canvas class="pulse" id="pulseBack" aria-hidden="true"></canvas>
+<div class="app">
 
-  <main id="main">
+  <!-- ───────── 左：フォルダのツリー ───────── -->
+  <aside class="side" id="side">
+    <p class="side__head"><svg class="i i--fill"><use href="#i-folder"/></svg><b>Portfolio</b><span>18 pages</span></p>
+    <nav aria-label="ページの一覧">
+      <ul class="tree">
+        <li class="dir is-open" data-dir="01">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>01. はじめに</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#about"><svg class="i"><use href="#i-file"/></svg><span>このサイトについて</span></a></li>
+          </ul>
+        </li>
+        <li class="dir is-open" data-dir="02">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>02. プロフィール</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#profile"><svg class="i"><use href="#i-file"/></svg><span>自己紹介</span></a></li>
+            <li><a class="file" href="#why"><svg class="i"><use href="#i-file"/></svg><span>選ばれる理由</span></a></li>
+          </ul>
+        </li>
+        <li class="dir is-open" data-dir="03">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>03. 対応工程</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#process"><svg class="i"><use href="#i-file"/></svg><span>対応可能な工程</span></a></li>
+          </ul>
+        </li>
+        <li class="dir is-open" data-dir="04">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>04. 実績</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#upstream"><svg class="i"><use href="#i-file"/></svg><span>上流工程</span></a></li>
+            <li><a class="file" href="#dev"><svg class="i"><use href="#i-file"/></svg><span>開発・テスト</span></a></li>
+            <li><a class="file" href="#ops"><svg class="i"><use href="#i-file"/></svg><span>保守・運用</span></a></li>
+            <li><a class="file" href="#impact"><svg class="i"><use href="#i-file"/></svg><span>参画前と参画後</span></a></li>
+          </ul>
+        </li>
+        <li class="dir is-open" data-dir="05">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>05. スキル</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#stack"><svg class="i"><use href="#i-file"/></svg><span>使用技術</span></a></li>
+            <li><a class="file" href="#ai"><svg class="i"><use href="#i-file"/></svg><span>AI駆動開発</span></a></li>
+            <li><a class="file" href="#security"><svg class="i"><use href="#i-file"/></svg><span>情報管理・セキュリティ</span></a></li>
+          </ul>
+        </li>
+        <li class="dir is-open" data-dir="06">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>06. プロダクト</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#workuru"><svg class="i"><use href="#i-file"/></svg><span>WORKURU</span></a></li>
+            <li><a class="file" href="#petnavi"><svg class="i"><use href="#i-file"/></svg><span>ペットナビ</span></a></li>
+            <li><a class="file" href="#smaholic"><svg class="i"><use href="#i-file"/></svg><span>smaholic</span></a></li>
+            <li><a class="file" href="#journal"><svg class="i"><use href="#i-file"/></svg><span>じゃ〜なる</span></a></li>
+          </ul>
+        </li>
+        <li class="dir is-open" data-dir="07">
+          <button class="dir__btn" type="button" aria-expanded="true"><svg class="i chev"><use href="#i-chev"/></svg><svg class="i"><use href="#i-folder"/></svg><span>07. ご依頼</span><em></em></button>
+          <ul>
+            <li><a class="file" href="#terms"><svg class="i"><use href="#i-file"/></svg><span>契約形態・稼働条件</span></a></li>
+            <li><a class="file" href="#flow"><svg class="i"><use href="#i-file"/></svg><span>ご発注までの流れ</span></a></li>
+            <li><a class="file" href="#contact"><svg class="i"><use href="#i-file"/></svg><span>お問い合わせ</span></a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <p class="progress"><span>PROGRESS</span><i><i id="progBar"></i></i><b id="progNum">0 / 18</b></p>
+  </aside>
+  <button class="shade" id="shade" type="button" tabindex="-1" aria-label="ページの一覧を閉じる"></button>
 
-    <!-- ───────── HERO ───────── -->
-    <section class="hero" id="top" aria-labelledby="wm">
-      <div class="hero__top">
-        <div class="hero__notes">
-          <p class="eyebrow">HARNESS ENGINEERING <span>×</span> SYSTEM INTEGRATION</p>
-          <ol class="notes" aria-label="注記">
-            <li>本図はスクロールで通電する。</li>
-            <li>着色した線は、信号が流れている線を示す。</li>
-            <li>モデルは単体で使用しないこと。</li>
+  <!-- ───────── 中央と右：ひらいているページ ───────── -->
+  <main class="main" id="main" tabindex="-1">
+
+    <!-- ══════════ 01. はじめに ══════════ -->
+    <article class="page" id="about">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">システム開発パートナー</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-clock"/></svg>実務経験 10年</li><li><svg class="i"><use href="#i-route"/></svg>全6工程に対応</li><li><svg class="i"><use href="#i-user"/></svg>フリーランス</li></ul>
+        <p class="lead">要件定義・設計・開発・テスト・保守運用 ／ SES・準委任・請負対応。システムエンジニア Yui Kikuchi（屋号 METASYSTEM）の、実績と仕事の進め方をまとめたポートフォリオです。</p>
+
+        <div class="stage">
+          <ul class="stats">
+            <li><span>実務経験</span><b>10<small>年</small></b></li>
+            <li><span>参画プロジェクト</span><b>8<small>件以上</small></b></li>
+            <li><span>対応工程</span><b>6<small>工程</small></b></li>
+            <li><span>契約形態</span><b class="stats__text">SES・準委任・請負</b></li>
+          </ul>
+          <h2 class="sub">目次</h2>
+          <ul class="toc">
+            <li><a href="#profile"><svg class="i"><use href="#i-folder"/></svg><b>02. プロフィール</b><span>自己紹介と、選ばれる理由</span></a></li>
+            <li><a href="#process"><svg class="i"><use href="#i-folder"/></svg><b>03. 対応工程</b><span>要件定義から保守・運用まで</span></a></li>
+            <li><a href="#upstream"><svg class="i"><use href="#i-folder"/></svg><b>04. 実績</b><span>官公庁・金融・生保・EC・小売</span></a></li>
+            <li><a href="#stack"><svg class="i"><use href="#i-folder"/></svg><b>05. スキル</b><span>使用技術、AI駆動開発、セキュリティ</span></a></li>
+            <li><a href="#workuru"><svg class="i"><use href="#i-folder"/></svg><b>06. プロダクト</b><span>自分でつくって運用しているサービス</span></a></li>
+            <li><a href="#terms"><svg class="i"><use href="#i-folder"/></svg><b>07. ご依頼</b><span>契約・稼働条件、発注の流れ、連絡先</span></a></li>
+          </ul>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">START</em></p>
+          <h2>左のフォルダから、見たいページへ</h2>
+          <p>ページは7つのフォルダに分けてあります。ツリーから開くか、下の「次へ」で順番に読み進められます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>要件定義から保守運用まで、一気通貫で対応できるのが強みです。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>実務経験10年のシステムエンジニア</li>
+          <li>要件定義から保守運用まで対応</li>
+          <li>SES・準委任・請負のどれでも</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <!-- ══════════ 02. プロフィール ══════════ -->
+    <article class="page" id="profile">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">自己紹介</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-clock"/></svg>実務経験 10年</li><li><svg class="i"><use href="#i-doc"/></svg>8件以上に参画</li></ul>
+        <p class="lead">Yui Kikuchi ｜ システムエンジニア（フリーランス）｜ 屋号 METASYSTEM</p>
+
+        <div class="stage">
+          <ul class="stats stats--2">
+            <li><span>Years of Experience</span><b>10<small>年</small></b><em>システム開発 実務経験年数</em></li>
+            <li><span>Projects Joined</span><b>8<small>件以上</small></b><em>参画プロジェクト数</em></li>
+          </ul>
+          <p class="text">システム開発の実務経験<mark>10年</mark>。SIer 案件を中心に、要件定義から保守運用までを<mark>一気通貫</mark>で対応してきた実務経験があります。エンタープライズ向けの大規模基幹システムでも、<mark>品質・納期・報連相</mark>を徹底できる体制で稼働します。</p>
+          <ul class="pills">
+            <li>品質</li><li>納期</li><li>報連相</li><li>一気通貫</li>
+          </ul>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">PROFILE</em></p>
+          <h2>SIer 案件を中心に10年</h2>
+          <p>要件定義から保守運用まで、ひととおりの工程を実務で経験しています。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>大規模な基幹システムでも、品質・納期・報連相を徹底します。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>実務経験は10年</li>
+          <li>参画プロジェクトは8件以上</li>
+          <li>大規模基幹システムにも対応</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="why">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">選ばれる理由</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-star"/></svg>3つの強み</li></ul>
+        <p class="lead">いまある体制に、そのまま加われること。それが、選んでいただいている理由です。</p>
+
+        <div class="stage">
+          <ol class="cards3">
+            <li><svg class="i"><use href="#i-shield"/></svg><h2>体制への適応力</h2><p>既存の開発体制・規約・レビュープロセスに合わせて稼働</p></li>
+            <li><svg class="i"><use href="#i-chat"/></svg><h2>報連相の徹底</h2><p>日報・週報・課題管理を確実に運用し、リスクの早期共有を徹底</p></li>
+            <li><svg class="i"><use href="#i-spark"/></svg><h2>生成AI活用による効率化</h2><p>品質・納期を落とさずに調査・製造・ドキュメント作成のスピードを向上</p></li>
+          </ol>
+          <p class="callout"><b>「一時的な増員」でも「特定工程だけの支援」でも対応可能です。</b>案件の規模・体制・商流に合わせて、柔軟な関わり方をご提案します。</p>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">STRENGTH</em></p>
+          <h2>体制を変えずに、加われる</h2>
+          <p>規約やレビューの進め方は、現場のものに合わせます。報告は日報・週報で、リスクは早めに共有します。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>生成AIは、品質と納期を落とさずにスピードを上げるために使います。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>既存の体制・規約・レビューに合わせる</li>
+          <li>日報・週報・課題管理でリスクを早く共有</li>
+          <li>一時的な増員や、特定工程だけの支援も可能</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <!-- ══════════ 03. 対応工程 ══════════ -->
+    <article class="page" id="process">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">対応可能な工程</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-route"/></svg>6 工程</li><li><svg class="i"><use href="#i-check"/></svg>どの工程からでも</li></ul>
+        <p class="lead">要件定義から保守・運用まで、すべての工程に対応します。</p>
+
+        <div class="stage">
+          <ol class="pipe" data-steps data-unit="工程">
+            <li data-tag="上流工程"><svg class="i"><use href="#i-chat"/></svg><b>要件定義</b><p>業務ヒアリング・要件整理・要件定義書作成</p></li>
+            <li data-tag="上流工程"><svg class="i"><use href="#i-doc"/></svg><b>基本設計</b><p>画面設計・機能設計・外部設計書作成</p></li>
+            <li data-tag="設計"><svg class="i"><use href="#i-layers"/></svg><b>詳細設計</b><p>内部設計・DB設計・詳細設計書作成</p></li>
+            <li data-tag="開発"><svg class="i"><use href="#i-term"/></svg><b>製造・単体テスト</b><p>コーディング規約準拠・単体テスト仕様書/結果作成</p></li>
+            <li data-tag="テスト"><svg class="i"><use href="#i-check"/></svg><b>結合・総合テスト</b><p>テストケース作成・実施・不具合管理</p></li>
+            <li data-tag="運用"><svg class="i"><use href="#i-pulse"/></svg><b>保守・運用</b><p>障害対応・改修・運用ドキュメント整備</p></li>
           </ol>
         </div>
+      </section>
+      <aside class="panel">
+        <section class="card note" data-step-panel>
+          <p class="note__top"><span>POINT</span><em class="tag">PROCESS</em></p>
+          <h2>上流から運用まで</h2>
+          <p>図の工程を押すか、「次へ」で1つずつ進めます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>特定の工程だけの支援にも、最初から最後までの参画にも対応します。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>上流（要件定義・設計）から参画できる</li>
+          <li>製造・テストは、規約と証跡まで含めて対応</li>
+          <li>リリース後の保守・運用まで続けられる</li>
+        </ul></section>
+      </aside>
+    </article>
 
-        <div class="ic" id="ic" aria-hidden="true">
-          <p class="ic__ref"><b>IC1</b><span id="temp">T=0.7</span></p>
-          <div class="ic__body">
-            <canvas class="ic__noise" id="noise"></canvas>
-            <span class="ic__notch"></span>
-            <span class="ic__name">MODEL</span>
-            <span class="ic__codes"><b>B</b><b>O</b><b>V</b><b>G</b><b>R</b><b>Y</b><b>L</b></span>
-          </div>
-          <div class="ic__pins">
-            <i data-pin="gnd"></i><i data-pin="hitl"></i><i data-pin="mem"></i><i data-pin="eval"></i><i data-pin="guard"></i><i data-pin="tool"></i><i data-pin="ctx"></i>
-          </div>
-        </div>
-      </div>
+    <!-- ══════════ 04. 実績 ══════════ -->
+    <article class="page" id="upstream">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">上流工程 対応実績</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-doc"/></svg>4 件</li><li>官公庁・金融・生保</li></ul>
+        <p class="lead">要件定義・基本設計フェーズからの参画</p>
 
-      <h1 class="wm" id="wm" aria-label="METASYSTEM"><span class="wm__line" aria-hidden="true"><span class="wm__c">M</span><span class="wm__c">E</span><span class="wm__c">T</span><span class="wm__c">A</span><i class="wm__base"></i></span><span class="wm__line" aria-hidden="true"><span class="wm__c">S</span><span class="wm__c">Y</span><span class="wm__c">S</span><span class="wm__c">T</span><span class="wm__c">E</span><span class="wm__c">M</span><i class="wm__base"></i></span></h1>
-
-      <p class="dim" aria-hidden="true"><i></i><span><b>META-SYSTEM ＝ </b>システムを動かすための、システム</span><i></i></p>
-
-      <div class="hero__bottom">
-        <div class="hero__copy">
-          <p class="hero__tag">AIを、現場に<wbr>結線する。</p>
-          <p class="hero__lead">モデルは賢くなりました。けれど、つながなければ働きません。METASYSTEM は、AIエージェントを開発現場のルール・工程・既存システムへ結線する、ハーネスエンジニアリング専門の屋号です。SI の現場で10年。現場スタッフ管理 SaaS「WORKURU」も開発・運用しています。</p>
-          <p class="hero__cta">
-            <a class="btn" href="#connect"><span>相談する</span><i aria-hidden="true">→</i></a>
-            <a class="btn btn--line" href="#harness"><span>結線図を読む</span><i aria-hidden="true">↓</i></a>
-          </p>
-        </div>
-
-        <dl class="tb" aria-label="表題欄">
-          <div class="tb__wide"><dt>図名 TITLE</dt><dd>METASYSTEM 総合結線図</dd></div>
-          <div><dt>図番 DWG NO.</dt><dd>MS-001</dd></div>
-          <div><dt>改訂 REV.</dt><dd>2026.11</dd></div>
-          <div><dt>設計 DRAWN</dt><dd>Y. KIKUCHI</dd></div>
-          <div><dt>尺度 SCALE</dt><dd>NTS</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ───────── 01 HARNESS ───────── -->
-    <section class="sec" id="harness" aria-labelledby="h-harness">
-      <header class="sec__head rv">
-        <p class="sec__id"><b>CN-01</b><span>ハーネスとは</span></p>
-        <p class="sec__en" aria-hidden="true">HARNESS</p>
-        <h2 class="sec__title" id="h-harness">ハーネスとは、<wbr>モデルの外側すべて。</h2>
-        <p class="sec__lead">同じモデルでも、何を読ませ、何を使わせ、どこで止め、どう確かめるかで、出てくる成果は別物になります。その配線一式を設計するのが、ハーネスエンジニアリングです。METASYSTEM は、6本の回路で考えます。</p>
-      </header>
-
-      <div class="pins" role="list" aria-label="ハーネスを構成する6つの回路">
-        <div class="pins__head" aria-hidden="true"><span></span><span>PIN</span><span>線色</span><span>信号</span><span>役割</span></div>
-
-        <div class="pin c-ctx" role="listitem" data-live data-trace="ctx">
-          <span class="term" data-tap="ctx"></span>
-          <span class="pin__no">01</span>
-          <span class="pin__wire"><i class="swatch"></i><b>L</b><small>青</small></span>
-          <span class="pin__sig"><b>CTX</b><small>コンテキスト</small></span>
-          <p class="pin__desc">CLAUDE.md、規約、設計書、既存コード。エージェントが最初に読むべきものを、読める形と量に整えます。</p>
-        </div>
-
-        <div class="pin c-tool" role="listitem" data-live data-trace="tool">
-          <span class="term" data-tap="tool"></span>
-          <span class="pin__no">02</span>
-          <span class="pin__wire"><i class="swatch"></i><b>Y</b><small>黄</small></span>
-          <span class="pin__sig"><b>TOOL</b><small>ツール</small></span>
-          <p class="pin__desc">MCP、CLI、社内 API。調べる・動かす・確かめる手段をつなぎ、人の手による受け渡しを減らします。</p>
-        </div>
-
-        <div class="pin c-guard" role="listitem" data-live data-trace="guard">
-          <span class="term" data-tap="guard"></span>
-          <span class="pin__no">03</span>
-          <span class="pin__wire"><i class="swatch"></i><b>R</b><small>赤</small></span>
-          <span class="pin__sig"><b>GUARD</b><small>ガードレール</small></span>
-          <p class="pin__desc">権限、サンドボックス、フック。やってはいけない操作は、注意書きではなく仕組みで止めます。</p>
-        </div>
-
-        <div class="pin c-eval" role="listitem" data-live data-trace="eval">
-          <span class="term" data-tap="eval"></span>
-          <span class="pin__no">04</span>
-          <span class="pin__wire"><i class="swatch"></i><b>G</b><small>緑</small></span>
-          <span class="pin__sig"><b>EVAL</b><small>検証</small></span>
-          <p class="pin__desc">テスト、静的解析、レビュー。合否を自分で確かめられる回路を組み、通るまで走らせます。</p>
-        </div>
-
-        <div class="pin c-mem" role="listitem" data-live data-trace="mem">
-          <span class="term" data-tap="mem"></span>
-          <span class="pin__no">05</span>
-          <span class="pin__wire"><i class="swatch"></i><b>V</b><small>紫</small></span>
-          <span class="pin__sig"><b>MEM</b><small>記憶</small></span>
-          <p class="pin__desc">決めたこと、手順、つまずいた所。次のセッションと次の担当者に引き継がれる形で残します。</p>
-        </div>
-
-        <div class="pin c-hitl" role="listitem" data-live data-trace="hitl">
-          <span class="term" data-tap="hitl"></span>
-          <span class="pin__no">06</span>
-          <span class="pin__wire"><i class="swatch"></i><b>O</b><small>橙</small></span>
-          <span class="pin__sig"><b>HITL</b><small>人の判断</small></span>
-          <p class="pin__desc">承認、レビュー、最終責任。人が握るべき所を決め、そこへ確実に戻ってくるようにします。</p>
-        </div>
-      </div>
-      <p class="hint hint--hover">行に触れると、その回路だけを図面の上で追跡できます。</p>
-    </section>
-
-    <!-- ───────── 02 SERVICE ───────── -->
-    <section class="sec" id="service" aria-labelledby="h-service">
-      <header class="sec__head rv">
-        <p class="sec__id"><b>CN-02</b><span>提供していること</span></p>
-        <p class="sec__en" aria-hidden="true">SERVICE</p>
-        <h2 class="sec__title" id="h-service">現場に通す、<wbr>3つの仕事。</h2>
-        <p class="sec__lead">一時的な増員でも、特定の工程だけの支援でも。既存の体制・規約・レビューの進め方に合わせて結線します。</p>
-      </header>
-
-      <div class="units">
-        <article class="unit" data-live data-trace="ctx tool guard">
-          <div class="conn"><span class="term c-ctx" data-tap="ctx"></span><span class="term c-tool" data-tap="tool"></span><span class="term c-guard" data-tap="guard"></span></div>
-          <div class="unit__main">
-            <p class="unit__id">U1</p>
-            <h3>エージェント開発環境の整備</h3>
-            <p>チームがエージェントを安心して使い始められる土台をつくります。個人の使いこなしに頼らず、リポジトリに仕組みとして残します。</p>
-            <p class="unit__wires" aria-label="使う回路"><span class="c-ctx">CTX</span><span class="c-tool">TOOL</span><span class="c-guard">GUARD</span></p>
-          </div>
-          <ul class="unit__list">
-            <li>CLAUDE.md・ルールの設計</li>
-            <li>スキル／フックの実装</li>
-            <li>MCP・社内ツールの接続</li>
-            <li>権限設計とセキュリティ規定への適合</li>
+        <div class="stage">
+          <ul class="works">
+            <li><span class="tag">官公庁</span><h2>ホストマイグレーション 要件定義支援</h2><p>現行業務フローのヒアリングから要件定義書・RFP対応資料を作成。</p><dl><div><dt>体制</dt><dd>100名規模</dd></div><div><dt>役割</dt><dd>アーキテクト</dd></div></dl></li>
+            <li><span class="tag">金融</span><h2>基幹システム モダナイゼーション</h2><p>画面設計書・機能設計書を規定フォーマットで作成。レビュー指摘対応まで一貫して対応。</p></li>
+            <li><span class="tag">官公庁</span><h2>レガシーシステム クラウドリフト</h2><p>現行機能分析・技術選定・クラウド環境でのPoC、入札に向けたRFP作成。</p></li>
+            <li><span class="tag">生保</span><h2>移行要件の整理</h2><p>既存システムのリプレース案件で、移行対象・移行方式・切替手順の要件を整理。</p></li>
           </ul>
-        </article>
-
-        <article class="unit" data-live data-trace="eval mem hitl">
-          <div class="conn"><span class="term c-eval" data-tap="eval"></span><span class="term c-mem" data-tap="mem"></span><span class="term c-hitl" data-tap="hitl"></span></div>
-          <div class="unit__main">
-            <p class="unit__id">U2</p>
-            <h3>SI 工程へのエージェント組み込み</h3>
-            <p>要件定義から保守運用まで、各工程の成果物づくりにエージェントを通します。成果物は、既存の規約・様式・レビュー体制に合わせます。</p>
-            <p class="unit__wires" aria-label="使う回路"><span class="c-eval">EVAL</span><span class="c-mem">MEM</span><span class="c-hitl">HITL</span></p>
-          </div>
-          <ul class="unit__list">
-            <li>設計書の下書きと整合性の確認</li>
-            <li>規約に沿ったコード生成とセルフレビュー</li>
-            <li>テストケース・エビデンスの整備</li>
-            <li>議事録・報告書・手順書の作成</li>
-          </ul>
-        </article>
-
-        <article class="unit" data-live data-trace="ctx tool eval">
-          <div class="conn"><span class="term c-ctx" data-tap="ctx"></span><span class="term c-tool" data-tap="tool"></span><span class="term c-eval" data-tap="eval"></span></div>
-          <div class="unit__main">
-            <p class="unit__id">U3</p>
-            <h3>レガシー解析・移行支援</h3>
-            <p>読める人が減ったコードとドキュメントを、エージェントで読み解きます。仕様書に起こし、移行とモダナイゼーションへつなげます。</p>
-            <p class="unit__wires" aria-label="使う回路"><span class="c-ctx">CTX</span><span class="c-tool">TOOL</span><span class="c-eval">EVAL</span></p>
-          </div>
-          <ul class="unit__list">
-            <li>既存コード・資料の解析と仕様書化</li>
-            <li>改修の影響範囲の調査</li>
-            <li>マイグレーション／モダナイゼーション</li>
-            <li>クラウド移行に向けた PoC</li>
-          </ul>
-        </article>
-      </div>
-
-      <div class="busbox rv">
-        <p class="label">BUS ／ 対応工程 — どこからでも参画できます</p>
-        <ol class="bus">
-          <li><b>要件定義</b><span>業務ヒアリング、要件整理、要件定義書</span></li>
-          <li><b>基本設計</b><span>画面設計、機能設計、外部設計書</span></li>
-          <li><b>詳細設計</b><span>内部設計、DB 設計、詳細設計書</span></li>
-          <li><b>製造・単体テスト</b><span>規約準拠の実装、仕様書と結果の作成</span></li>
-          <li><b>結合・総合テスト</b><span>テストケース作成、実施、不具合管理</span></li>
-          <li><b>保守・運用</b><span>障害対応、改修、運用ドキュメント整備</span></li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ───────── 03 PRODUCT ───────── -->
-    <section class="sec" id="product" aria-labelledby="h-product">
-      <header class="sec__head rv">
-        <p class="sec__id"><b>CN-03</b><span>自社プロダクト</span></p>
-        <p class="sec__en" aria-hidden="true">PRODUCT</p>
-        <h2 class="sec__title" id="h-product">結線の先に、<wbr>動いているプロダクト。</h2>
-        <p class="sec__lead">人に勧める配線は、まず自分の現場で通電させます。WORKURU は、METASYSTEM が企画から設計・開発・運用まで手がける SaaS で、ハーネスエンジニアリングの実践の場でもあります。くわしくは、紹介資料をそのままご覧ください。</p>
-      </header>
-
-      <!-- 紹介資料：ワークルのリポジトリの資料（lp/assets/deck/）を scripts/sync-workuru-deck.sh で assets/workuru/ に写したもの。
-           めくる動きは CSS の scroll-snap（JavaScript がなくても横にめくれる）。前・次のボタン、枚数、目盛りは main.js。
-           deck: の目印の間は、スクリプトが書く。手で直さない -->
-      <div class="wk" data-live data-trace="hitl mem eval guard tool ctx">
-        <div class="conn"><span class="term c-ctx" data-tap="ctx"></span><span class="term c-tool" data-tap="tool"></span><span class="term c-guard" data-tap="guard"></span><span class="term c-eval" data-tap="eval"></span><span class="term c-mem" data-tap="mem"></span><span class="term c-hitl" data-tap="hitl"></span></div>
-
-        <div class="wk__head">
-          <p class="wk__logo">
-            <svg viewBox="0 0 100 100" aria-hidden="true"><rect width="100" height="100" rx="23" fill="#fff" fill-opacity=".1"/><polyline points="20,38 34,72 50,48 66,72 80,38" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/><circle cx="50" cy="31" r="8" fill="#F0793A"/></svg>
-            <span class="wk__word" aria-label="WORKURU">WORK<em>U</em>R<em>U</em></span>
-            <span class="wk__kana">ワークル</span>
-          </p>
-          <h3>現場スタッフの配置・打刻・日報アプリ<span>紹介資料</span></h3>
         </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">UPSTREAM</em></p>
+          <h2>聞いて、決めて、文書に残す</h2>
+          <p>現行業務のヒアリングから、要件定義書・設計書・RFP の作成まで担当しました。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>100名規模の体制で、アーキテクトを務めた実績があります。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>官公庁・金融・生保の上流工程を経験</li>
+          <li>ヒアリングから要件定義書、RFP まで</li>
+          <li>マイグレーションやクラウド移行の要件整理</li>
+        </ul></section>
+      </aside>
+    </article>
 
-        <div class="deck" data-deck>
-          <div class="deck__track" tabindex="0" role="region" aria-label="WORKURU 紹介資料のスライド（左右にめくれます）">
-          <!-- deck:slides -->
-          <figure class="deck__slide"><a href="assets/workuru/slide-01.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-01-800.jpg" srcset="assets/workuru/slide-01-800.jpg 800w, assets/workuru/slide-01.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="eager" decoding="async" alt="1枚目：表紙：明日の配置は、アプリで伝える。ワークル（WORKURU）のご紹介"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-02.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-02-800.jpg" srcset="assets/workuru/slide-02-800.jpg 800w, assets/workuru/slide-02.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="2枚目：配置・打刻・日報を、1つのアプリにまとめました（10人まで月5,000円、協力会社は何人でも0円、11の言語、30日間無料）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-03.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-03-800.jpg" srcset="assets/workuru/slide-03-800.jpg 800w, assets/workuru/slide-03.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="3枚目：01 現場の仕事は、いま"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-04.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-04-800.jpg" srcset="assets/workuru/slide-04-800.jpg 800w, assets/workuru/slide-04.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="4枚目：建設業で働く人は、ピークの1997年から3割減りました（685万人から478万人へ。55歳以上が36.6%、29歳以下が11.9%。警備員の47.3%が60歳以上）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-05.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-05-800.jpg" srcset="assets/workuru/slide-05-800.jpg 800w, assets/workuru/slide-05.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="5枚目：残業の上限が決まり、外国人のスタッフが増えています（建設業は2024年4月から原則 月45時間・年360時間。建設業で働く外国人は206,468人で、前年より16.1%増）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-06.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-06-800.jpg" srcset="assets/workuru/slide-06-800.jpg 800w, assets/workuru/slide-06.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="6枚目：現場の管理は、まだExcelと紙が中心です（Excel などのPCソフト68.5%、紙・手書き12.7%、クラウドの施工管理アプリ8.5%。施工管理アプリを入れている会社は31.9%）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-07.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-07-800.jpg" srcset="assets/workuru/slide-07-800.jpg 800w, assets/workuru/slide-07.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="7枚目：朝の電話と、月末のまとめ作業を減らします（これまでとワークルを使ったときの比べ）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-08.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-08-800.jpg" srcset="assets/workuru/slide-08-800.jpg 800w, assets/workuru/slide-08.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="8枚目：02 ワークルでできること"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-09.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-09-800.jpg" srcset="assets/workuru/slide-09-800.jpg 800w, assets/workuru/slide-09.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="9枚目：配置の連絡から月末の締めまで、同じアプリで進みます（前の日・朝・現場で・帰りに・月末の5つの場面）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-10.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-10-800.jpg" srcset="assets/workuru/slide-10-800.jpg 800w, assets/workuru/slide-10.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="10枚目：スマホに慣れていない人でも使えるように作りました（メンバーの機能）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-11.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-11-800.jpg" srcset="assets/workuru/slide-11-800.jpg 800w, assets/workuru/slide-11.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="11枚目：配置は、ホワイトボードと同じ感覚で組めます（管理者の機能）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-12.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-12-800.jpg" srcset="assets/workuru/slide-12-800.jpg 800w, assets/workuru/slide-12.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="12枚目：外国人やシニアのスタッフも、迷わず使えます（11の言語、文字の大きさ、業種に合わせた言葉）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-13.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-13-800.jpg" srcset="assets/workuru/slide-13-800.jpg 800w, assets/workuru/slide-13.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="13枚目：事務所に寄らず、現場へ直行する仕事に向いています（12の業種）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-14.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-14-800.jpg" srcset="assets/workuru/slide-14-800.jpg 800w, assets/workuru/slide-14.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="14枚目：勤怠の記録を正しく残し、見せる範囲も分けられます"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-15.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-15-800.jpg" srcset="assets/workuru/slide-15-800.jpg 800w, assets/workuru/slide-15.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="15枚目：03 料金と始め方"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-16.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-16-800.jpg" srcset="assets/workuru/slide-16-800.jpg 800w, assets/workuru/slide-16.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="16枚目：10人まで月5,000円。協力会社は何人でも無料です（人数ごとの月の料金）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-17.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-17-800.jpg" srcset="assets/workuru/slide-17-800.jpg 800w, assets/workuru/slide-17.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="17枚目：ほかの現場向けサービスと、料金を比べました（10人・20人・30人・50人の月の料金）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-18.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-18-800.jpg" srcset="assets/workuru/slide-18-800.jpg 800w, assets/workuru/slide-18.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="18枚目：料金に見合う効果があるか、試算しました（1人あたり月500円。20人の会社が配置の電話をやめた場合の試算）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-19.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-19-800.jpg" srcset="assets/workuru/slide-19-800.jpg 800w, assets/workuru/slide-19.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="19枚目：iPhone があれば始められます（導入の4つのステップ）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-20.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-20-800.jpg" srcset="assets/workuru/slide-20-800.jpg 800w, assets/workuru/slide-20.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="20枚目：まずは30日間、無料で使ってみてください（申し込みのフォーム workuru.app/start）"></a></figure>
-          <figure class="deck__slide"><a href="assets/workuru/slide-21.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-21-800.jpg" srcset="assets/workuru/slide-21-800.jpg 800w, assets/workuru/slide-21.jpg 1600w" sizes="(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px" width="1600" height="900" loading="lazy" decoding="async" alt="21枚目：この資料で使ったデータの出典"></a></figure>
+    <article class="page" id="dev">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">開発・テスト実績</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-term"/></svg>4 件 ＋ α</li><li>EC・小売・金融</li></ul>
+        <p class="lead">規約遵守と品質担保を両立した製造工程</p>
+
+        <div class="stage">
+          <ul class="works">
+            <li><span class="tag">EC</span><h2>業務システム 新規開発</h2><p>詳細設計書に基づく製造・単体テスト。コーディング規約 / レビュー体制に準拠。</p></li>
+            <li><span class="tag">小売</span><h2>既存システム改修</h2><p>影響範囲調査 → 改修 → 回帰テストまで対応。障害の再発防止策を提案。</p></li>
+            <li><span class="tag">小売</span><h2>基盤・インフラ構築支援</h2><p>環境構築・デプロイ自動化・監視設定など、開発基盤まわりの整備を支援。</p></li>
+            <li><span class="tag">金融</span><h2>結合テスト・総合テスト支援</h2><p>テストケース設計・実施・不具合管理表の運用。テスト消化率の可視化に貢献。</p></li>
+          </ul>
+          <p class="fine">その他：帳票出力改修、API連携開発、バッチ処理開発 等 複数件</p>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">DEVELOPMENT</em></p>
+          <h2>規約どおりに書き、証跡まで残す</h2>
+          <p>設計書にもとづく製造と単体テスト。改修では、影響範囲の調査から回帰テストまで対応しました。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>つくるだけでなく、環境構築・デプロイ自動化・監視の整備も支援できます。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>設計書にもとづく製造と単体テスト</li>
+          <li>影響範囲の調査から回帰テストまで</li>
+          <li>テストの設計・実施・不具合管理</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="ops">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">保守・運用実績</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-pulse"/></svg>4 つの対応</li></ul>
+        <p class="lead">止められないシステムを支える運用対応</p>
+
+        <div class="stage">
+          <ul class="works works--2">
+            <li><h2>障害対応・一次切り分け</h2><p>本番障害発生時の一次切り分け、原因調査、復旧対応、報告書作成。</p></li>
+            <li><h2>定期リリース対応</h2><p>月次・週次のリリース作業、リリース手順書作成、切り戻し対応。</p></li>
+            <li><h2>運用ドキュメント整備</h2><p>運用手順書・障害対応マニュアルの整備、属人化の解消。</p></li>
+            <li><h2>監視・アラート対応</h2><p>死活監視・リソース監視の設定、アラート発生時の一次対応フロー構築。</p></li>
+          </ul>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">OPERATION</em></p>
+          <h2>だれが当番でも、同じように動ける</h2>
+          <p>障害の一次切り分けから報告書まで。手順書と監視を整えて、属人化をなくします。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>月次・週次のリリースと、切り戻しまで対応します。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>本番障害の一次切り分けから報告書まで</li>
+          <li>定期リリースと切り戻し</li>
+          <li>手順書と監視で、属人化をなくす</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="impact">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">参画前 vs 参画後</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-swap"/></svg>4 つの改善</li></ul>
+        <p class="lead">参画した現場で、何がどう変わったか。</p>
+
+        <div class="stage">
+          <div class="ba">
+            <p class="ba__head"><span>Before ｜ 参画前</span><span>After ｜ 参画後</span></p>
+            <ul>
+              <li><p>仕様書とソースの乖離が放置</p><svg class="i"><use href="#i-right"/></svg><p>設計書とソースの整合性を復元</p></li>
+              <li><p>単体テストの証跡が不十分</p><svg class="i"><use href="#i-right"/></svg><p>テストエビデンスを規定様式で整備</p></li>
+              <li><p>結合テストで手戻り多発</p><svg class="i"><use href="#i-right"/></svg><p>影響範囲分析で手戻りを削減</p></li>
+              <li><p>属人化した保守対応</p><svg class="i"><use href="#i-right"/></svg><p>保守手順書を整備し属人化を解消</p></li>
+            </ul>
+          </div>
+          <p class="callout">結合テスト工程での手戻り件数：<b>大幅削減</b></p>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">IMPACT</em></p>
+          <h2>ずれを直し、証跡を残す</h2>
+          <p>設計書とソースの整合をとり、テストの証跡を決まった様式で残すところから始めます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>影響範囲の分析と手順書の整備で、手戻りと属人化を減らします。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>設計書とソースのずれを直す</li>
+          <li>テストの証跡を、規定の様式で残す</li>
+          <li>結合テストの手戻り件数を大幅に削減</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <!-- ══════════ 05. スキル ══════════ -->
+    <article class="page" id="stack">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">使用技術</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-layers"/></svg>6 分類</li></ul>
+        <p class="lead">レガシーからモダンまで。オンプレミスにもクラウドにも対応します。</p>
+
+        <div class="stage">
+          <dl class="stack">
+            <div><dt>言語</dt><dd><span>Java</span><span>COBOL</span><span>Go</span><span>Python</span><span>React (TypeScript)</span></dd></div>
+            <div><dt>フレームワーク</dt><dd><span>Spring</span><span>Spring Boot</span><span>Next.js</span></dd></div>
+            <div><dt>DB</dt><dd><span>Oracle</span><span>SQL Server</span><span>PostgreSQL</span><span>MySQL</span></dd></div>
+            <div><dt>インフラ</dt><dd><span>Windows Server</span><span>Linux</span><span>オンプレ</span><span>AWS</span><span>Azure</span></dd></div>
+            <div><dt>ツール</dt><dd><span>Git / Subversion</span><span>Backlog</span><span>Redmine</span><span>JIRA</span><span>Excel 設計書運用</span></dd></div>
+            <div><dt>開発手法</dt><dd><span>ウォーターフォール</span><span>アジャイル</span><em>両対応</em></dd></div>
+          </dl>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">STACK</em></p>
+          <h2>COBOL から Go、React まで</h2>
+          <p>レガシーの現場でもモダンな現場でも動けます。DB はオンプレの商用製品から OSS まで。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>ウォーターフォールにも、アジャイルにも対応します。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>Java・COBOL から Go・Python・TypeScript まで</li>
+          <li>オンプレミスと、AWS・Azure の両方</li>
+          <li>Backlog・Redmine・JIRA での進行管理</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="ai">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">AI駆動開発</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-spark"/></svg>4 つの活用</li></ul>
+        <p class="lead">品質と納期を守るための、効率化の手段として使います。</p>
+
+        <div class="stage">
+          <ul class="works works--2">
+            <li><h2>ハーネスエンジニアリング</h2><p>AIエージェントが現場のルール・工程・既存システムの文脈の中で動けるよう、読ませるもの・使わせる道具・権限・検証のしくみを整え、より効果的な開発を実現</p></li>
+            <li><h2>既存コード・ドキュメントの解析</h2><p>生成AIを活用したレガシーコード解析・仕様書化で、調査工数を削減</p></li>
+            <li><h2>コーディング・コードレビュー支援</h2><p>規約準拠のコード生成・セルフレビューにAIを活用し、手戻りを削減</p></li>
+            <li><h2>ドキュメント整備の効率化</h2><p>議事録・報告書・運用手順書の作成をAI活用で効率化し、報告品質を担保</p></li>
+          </ul>
+          <p class="callout">あくまで<b>「品質・納期を守るための効率化手段」</b>として活用。成果物は既存の規約・体制に準拠します。</p>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">AI</em></p>
+          <h2>AI は、効率化の手段</h2>
+          <p>調査・製造・レビュー・ドキュメント作成のスピードを上げるために使います。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>成果物は、いつもの規約と体制に合わせます。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>AIエージェントが働ける環境を整える</li>
+          <li>レガシーコードの解析と仕様書化</li>
+          <li>成果物は、既存の規約・体制に準拠</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="security">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">情報管理・セキュリティ対応</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-shield"/></svg>3 つの対応</li></ul>
+        <p class="lead">客先の規程と環境に合わせて作業します。</p>
+
+        <div class="stage">
+          <ol class="cards3">
+            <li><svg class="i"><use href="#i-shield"/></svg><h2>秘密保持・情報管理</h2><p>NDA締結を前提とした対応。客先の情報取扱規程を遵守</p></li>
+            <li><svg class="i"><use href="#i-sliders"/></svg><h2>セキュリティ規定への準拠</h2><p>客先の開発環境・セキュリティ規定に応じた作業端末/VPN等の対応</p></li>
+            <li><svg class="i"><use href="#i-doc"/></svg><h2>監査・証跡対応</h2><p>作業ログ・レビュー記録・テストエビデンスなど監査対応可能な証跡を整備</p></li>
+          </ol>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">SECURITY</em></p>
+          <h2>NDA を前提に対応</h2>
+          <p>作業端末や VPN など、客先の環境とセキュリティ規定に合わせます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>監査に応えられる証跡を、作業の中で残します。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>NDA の締結を前提に対応</li>
+          <li>客先の端末・VPN・規定に合わせる</li>
+          <li>作業ログ・レビュー記録・エビデンスを残す</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <!-- ══════════ 06. プロダクト ══════════ -->
+    <article class="page" id="workuru">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">WORKURU<small>ワークル</small></h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-box"/></svg>SaaS</li><li>iPhone アプリ ＋ 管理者 Web</li></ul>
+        <p class="lead">現場スタッフの配置・打刻・日報アプリ</p>
+
+        <div class="stage">
+          <dl class="spec">
+            <div><dt>概要</dt><dd>配置を決めると本人のアプリに通知が届き、打刻・日報・写真・交通費の申請までアプリ1つにまとまる、現場スタッフ管理のサービス。</dd></div>
+            <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
+            <div><dt>技術</dt><dd>Flutter ／ Supabase ／ Cloudflare Pages</dd></div>
+            <div><dt>URL</dt><dd><a href="https://workuru.app/" target="_blank" rel="noopener">workuru.app<svg class="i"><use href="#i-out"/></svg></a></dd></div>
+          </dl>
+
+          <h2 class="sub">紹介資料</h2>
+          <!-- 紹介資料：ワークルのリポジトリの資料（lp/assets/deck/）を scripts/sync-workuru-deck.sh で assets/workuru/ に写したもの。
+               めくる動きは CSS の scroll-snap（JavaScript がなくても横にめくれる）。前・次のボタン、枚数、目盛りは main.js。
+               deck: の目印の間は、スクリプトが書く。手で直さない -->
+          <div class="deck" data-deck>
+            <div class="deck__track" tabindex="0" role="region" aria-label="WORKURU 紹介資料のスライド（左右にめくれます）">
+            <!-- deck:slides -->
+          <figure class="deck__slide"><a href="assets/workuru/slide-01.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-01-800.jpg" srcset="assets/workuru/slide-01-800.jpg 800w, assets/workuru/slide-01.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="eager" decoding="async" alt="1枚目：表紙：明日の配置は、アプリで伝える。ワークル（WORKURU）のご紹介"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-02.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-02-800.jpg" srcset="assets/workuru/slide-02-800.jpg 800w, assets/workuru/slide-02.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="2枚目：配置・打刻・日報を、1つのアプリにまとめました（10人まで月5,000円、協力会社は何人でも0円、11の言語、30日間無料）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-03.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-03-800.jpg" srcset="assets/workuru/slide-03-800.jpg 800w, assets/workuru/slide-03.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="3枚目：01 現場の仕事は、いま"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-04.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-04-800.jpg" srcset="assets/workuru/slide-04-800.jpg 800w, assets/workuru/slide-04.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="4枚目：建設業で働く人は、ピークの1997年から3割減りました（685万人から478万人へ。55歳以上が36.6%、29歳以下が11.9%。警備員の47.3%が60歳以上）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-05.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-05-800.jpg" srcset="assets/workuru/slide-05-800.jpg 800w, assets/workuru/slide-05.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="5枚目：残業の上限が決まり、外国人のスタッフが増えています（建設業は2024年4月から原則 月45時間・年360時間。建設業で働く外国人は206,468人で、前年より16.1%増）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-06.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-06-800.jpg" srcset="assets/workuru/slide-06-800.jpg 800w, assets/workuru/slide-06.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="6枚目：現場の管理は、まだExcelと紙が中心です（Excel などのPCソフト68.5%、紙・手書き12.7%、クラウドの施工管理アプリ8.5%。施工管理アプリを入れている会社は31.9%）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-07.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-07-800.jpg" srcset="assets/workuru/slide-07-800.jpg 800w, assets/workuru/slide-07.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="7枚目：朝の電話と、月末のまとめ作業を減らします（これまでとワークルを使ったときの比べ）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-08.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-08-800.jpg" srcset="assets/workuru/slide-08-800.jpg 800w, assets/workuru/slide-08.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="8枚目：02 ワークルでできること"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-09.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-09-800.jpg" srcset="assets/workuru/slide-09-800.jpg 800w, assets/workuru/slide-09.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="9枚目：配置の連絡から月末の締めまで、同じアプリで進みます（前の日・朝・現場で・帰りに・月末の5つの場面）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-10.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-10-800.jpg" srcset="assets/workuru/slide-10-800.jpg 800w, assets/workuru/slide-10.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="10枚目：スマホに慣れていない人でも使えるように作りました（メンバーの機能）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-11.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-11-800.jpg" srcset="assets/workuru/slide-11-800.jpg 800w, assets/workuru/slide-11.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="11枚目：配置は、ホワイトボードと同じ感覚で組めます（管理者の機能）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-12.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-12-800.jpg" srcset="assets/workuru/slide-12-800.jpg 800w, assets/workuru/slide-12.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="12枚目：外国人やシニアのスタッフも、迷わず使えます（11の言語、文字の大きさ、業種に合わせた言葉）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-13.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-13-800.jpg" srcset="assets/workuru/slide-13-800.jpg 800w, assets/workuru/slide-13.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="13枚目：事務所に寄らず、現場へ直行する仕事に向いています（12の業種）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-14.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-14-800.jpg" srcset="assets/workuru/slide-14-800.jpg 800w, assets/workuru/slide-14.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="14枚目：勤怠の記録を正しく残し、見せる範囲も分けられます"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-15.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-15-800.jpg" srcset="assets/workuru/slide-15-800.jpg 800w, assets/workuru/slide-15.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="15枚目：03 料金と始め方"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-16.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-16-800.jpg" srcset="assets/workuru/slide-16-800.jpg 800w, assets/workuru/slide-16.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="16枚目：10人まで月5,000円。協力会社は何人でも無料です（人数ごとの月の料金）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-17.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-17-800.jpg" srcset="assets/workuru/slide-17-800.jpg 800w, assets/workuru/slide-17.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="17枚目：ほかの現場向けサービスと、料金を比べました（10人・20人・30人・50人の月の料金）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-18.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-18-800.jpg" srcset="assets/workuru/slide-18-800.jpg 800w, assets/workuru/slide-18.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="18枚目：料金に見合う効果があるか、試算しました（1人あたり月500円。20人の会社が配置の電話をやめた場合の試算）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-19.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-19-800.jpg" srcset="assets/workuru/slide-19-800.jpg 800w, assets/workuru/slide-19.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="19枚目：iPhone があれば始められます（導入の4つのステップ）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-20.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-20-800.jpg" srcset="assets/workuru/slide-20-800.jpg 800w, assets/workuru/slide-20.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="20枚目：まずは30日間、無料で使ってみてください（申し込みのフォーム workuru.app/start）"></a></figure>
+          <figure class="deck__slide"><a href="assets/workuru/slide-21.jpg" target="_blank" rel="noopener"><img src="assets/workuru/slide-21-800.jpg" srcset="assets/workuru/slide-21-800.jpg 800w, assets/workuru/slide-21.jpg 1600w" sizes="(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px" width="1600" height="900" loading="lazy" decoding="async" alt="21枚目：この資料で使ったデータの出典"></a></figure>
           <!-- /deck:slides -->
-          </div>
-          <div class="deck__bar">
-            <button class="deck__btn" type="button" data-prev aria-label="前のスライド" disabled>←</button>
-            <button class="deck__btn" type="button" data-next aria-label="次のスライド">→</button>
-            <p class="deck__count" aria-live="polite"><b data-cur>01</b> / <!-- deck:total -->21<!-- /deck:total --></p>
-            <div class="deck__ticks" data-ticks aria-hidden="true"></div>
-          </div>
-          <p class="deck__cap" data-cap><!-- deck:first -->表紙：明日の配置は、アプリで伝える。ワークル（WORKURU）のご紹介<!-- /deck:first --></p>
-        </div>
-
-        <div class="wk__foot">
-          <a class="btn btn--wk" href="assets/workuru/workuru-intro.pdf" download="ワークル紹介資料.pdf"><span>紹介資料をダウンロード（PDF）</span><i aria-hidden="true">↓</i></a>
-          <a class="btn btn--wkline" href="https://workuru.app/" target="_blank" rel="noopener"><span>workuru.app を見る</span><i aria-hidden="true">↗</i></a>
-          <p class="wk__meta"><!-- deck:meta -->21枚・2.6MB<!-- /deck:meta -->。スライドを押すと、大きな画像で開きます。数字の出典は最後のスライドにあります。</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ───────── 04 GROUND ───────── -->
-    <section class="sec" id="ground" aria-labelledby="h-ground">
-      <header class="sec__head rv">
-        <p class="sec__id"><b>CN-04</b><span>実績と仕様</span></p>
-        <p class="sec__en" aria-hidden="true">GROUND</p>
-        <h2 class="sec__title" id="h-ground">アースは、<wbr>10年の SI 実務。</h2>
-        <p class="sec__lead">ハーネスは、現場を知らなければ組めません。官公庁・金融・生保・EC・小売の基幹システムで、要件定義から保守運用までを一気通貫で担当してきました。品質・納期・報連相。その基準電位の上に、エージェントを載せます。</p>
-      </header>
-
-      <div class="gnd" data-live>
-        <div class="gnd__sym">
-          <span class="term" data-end="gnd"></span>
-          <svg viewBox="0 0 60 64" aria-hidden="true"><path d="M30 0v30M4 30h52M13 42h34M22 54h16"/></svg>
-          <p>B <small>黒</small><br>GND</p>
-        </div>
-        <ul class="stats">
-          <li><p><b>10</b><i>年</i></p><small>システム開発の実務経験</small></li>
-          <li><p><b>8<sup>+</sup></b><i>件</i></p><small>参画プロジェクト</small></li>
-          <li><p><b>6</b><i>工程</i></p><small>要件定義から保守運用まで</small></li>
-        </ul>
-      </div>
-
-      <div class="rec rv">
-        <p class="label">LOAD LIST ／ 主な実績</p>
-        <ul class="rec__list">
-          <li><span class="tag">官公庁</span><b>ホストマイグレーション 要件定義支援</b><p>現行業務フローのヒアリングから、要件定義書・RFP 対応資料を作成。100名規模の体制でアーキテクトを担当。</p></li>
-          <li><span class="tag">金融</span><b>基幹システム モダナイゼーション</b><p>画面設計書・機能設計書を規定フォーマットで作成。レビュー指摘への対応まで一貫して担当。</p></li>
-          <li><span class="tag">官公庁</span><b>レガシーシステム クラウドリフト</b><p>現行機能の分析、技術選定、クラウド環境での PoC、入札に向けた RFP 作成。</p></li>
-          <li><span class="tag">生保</span><b>移行要件の整理</b><p>既存システムのリプレースで、移行対象・移行方式・切替手順の要件を整理。</p></li>
-          <li><span class="tag">EC</span><b>業務システム 新規開発</b><p>詳細設計書に基づく製造と単体テスト。コーディング規約とレビュー体制に準拠。</p></li>
-          <li><span class="tag">小売</span><b>既存システム改修</b><p>影響範囲の調査から改修、回帰テストまで。障害の再発防止策を提案。</p></li>
-          <li><span class="tag">小売</span><b>基盤・インフラ構築支援</b><p>環境構築、デプロイ自動化、監視設定など、開発基盤まわりを整備。</p></li>
-          <li><span class="tag">金融</span><b>結合・総合テスト支援</b><p>テストケースの設計と実施、不具合管理表の運用。テスト消化率を見える化。</p></li>
-        </ul>
-        <p class="rec__more">ほかに、障害の一次切り分けと復旧、定期リリース、運用手順書の整備、監視・アラート対応などの保守運用。</p>
-      </div>
-
-      <div class="specbox rv">
-        <p class="label">SPECIFICATIONS ／ 仕様</p>
-        <dl class="spec">
-          <div><dt>屋号</dt><dd>METASYSTEM</dd></div>
-          <div><dt>代表</dt><dd>Yui Kikuchi<small>ソフトウェアエンジニア</small></dd></div>
-          <div><dt>専門</dt><dd>ハーネスエンジニアリング／システムインテグレーション</dd></div>
-          <div><dt>対応工程</dt><dd>要件定義・基本設計・詳細設計・製造・単体テスト・結合／総合テスト・保守運用</dd></div>
-          <div><dt>契約形態</dt><dd>SES／準委任／一括請負</dd></div>
-          <div><dt>稼働</dt><dd>リモート中心<small>客先常駐もご相談ください</small></dd></div>
-          <div><dt>開発手法</dt><dd>ウォーターフォール／アジャイル</dd></div>
-          <div><dt>言語</dt><dd class="mono">Java · COBOL · Go · Python · TypeScript (React) · Dart (Flutter)</dd></div>
-          <div><dt>フレームワーク</dt><dd class="mono">Spring · Spring Boot · Next.js · Flutter</dd></div>
-          <div><dt>データベース</dt><dd class="mono">Oracle · SQL Server · PostgreSQL · MySQL</dd></div>
-          <div><dt>インフラ</dt><dd class="mono">AWS · Azure · Linux · Windows Server · オンプレミス</dd></div>
-          <div><dt>管理ツール</dt><dd class="mono">Git · Subversion · Backlog · Redmine · JIRA</dd></div>
-          <div><dt>情報管理</dt><dd>NDA の締結を前提に対応します。客先の情報取扱規程・セキュリティ規定に従い、作業ログ・レビュー記録・テストエビデンスなど、監査に耐える証跡を残します。</dd></div>
-        </dl>
-      </div>
-    </section>
-
-    <!-- ───────── 05 CONNECT ───────── -->
-    <section class="sec sec--last" id="connect" aria-labelledby="h-connect">
-      <header class="sec__head rv">
-        <p class="sec__id"><b>CN-05</b><span>お問い合わせ</span></p>
-        <p class="sec__en" aria-hidden="true">CONNECT</p>
-        <h2 class="sec__title" id="h-connect">空き端子、<wbr>あります。</h2>
-        <p class="sec__lead">エージェントを現場に入れたい。どこかの工程が詰まっている。古いシステムを読み解きたい。——状況をそのままお聞かせください。スキルシートのご提示から面談、条件のご相談まで、すぐに対応します。</p>
-      </header>
-
-      <div class="bench" id="bench">
-        <p class="bench__status" id="benchStatus" role="status"><i></i><span>未接続 — OPEN</span></p>
-        <p class="hint bench__hint">プラグをつまんで、左のコネクタへ。クリックでも挿さります。</p>
-        <svg class="bench__svg" aria-hidden="true" focusable="false">
-          <path class="cable-case"/><path class="cable"/><path class="cable-core"/><path class="cable-sig"/>
-        </svg>
-        <div class="socket" id="socket" data-live>
-          <div class="socket__terms">
-            <span class="term c-ctx" data-end="ctx"></span><span class="term c-tool" data-end="tool"></span><span class="term c-guard" data-end="guard"></span><span class="term c-eval" data-end="eval"></span><span class="term c-mem" data-end="mem"></span><span class="term c-hitl" data-end="hitl"></span>
-          </div>
-          <div class="socket__body">
-            <span class="socket__led"></span>
-            <span class="socket__lbl">CN<br>OUT</span>
-            <span class="socket__mouth"></span>
+            </div>
+            <div class="deck__bar">
+              <button class="btn btn--sq" type="button" data-prev aria-label="前のスライド" disabled><svg class="i"><use href="#i-left"/></svg></button>
+              <button class="btn btn--sq" type="button" data-next aria-label="次のスライド"><svg class="i"><use href="#i-right"/></svg></button>
+              <p class="deck__count" aria-live="polite"><b data-cur>01</b> / <!-- deck:total -->21<!-- /deck:total --></p>
+              <div class="deck__ticks" data-ticks aria-hidden="true"></div>
+            </div>
+            <p class="deck__cap" data-cap><!-- deck:first -->表紙：明日の配置は、アプリで伝える。ワークル（WORKURU）のご紹介<!-- /deck:first --></p>
+            <p class="deck__foot">
+              <a class="btn btn--go" href="assets/workuru/workuru-intro.pdf" download="ワークル紹介資料.pdf"><svg class="i"><use href="#i-down"/></svg>紹介資料をダウンロード（PDF）</a>
+              <span><!-- deck:meta -->21枚・2.6MB<!-- /deck:meta -->。スライドを押すと、大きな画像で開きます。</span>
+            </p>
           </div>
         </div>
-        <button class="plug" id="plug" type="button" aria-pressed="false" aria-label="あなたのプロジェクトのプラグを、コネクタに接続する">
-          <span class="plug__pins" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
-          <span class="plug__body" aria-hidden="true">YOUR<br>PROJECT</span>
-        </button>
-      </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">PRODUCT</em></p>
+          <h2>企画から運用まで、ひとりで</h2>
+          <p>受託の開発とは別に、自分でつくって運用しているサービスです。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>くわしい内容は、紹介資料（21枚）でご覧いただけます。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>現場スタッフ管理の SaaS を運用している</li>
+          <li>iPhone アプリと、管理者の Web 版</li>
+          <li>紹介資料は PDF でダウンロードできる</li>
+        </ul></section>
+      </aside>
+    </article>
 
-      <div class="contact">
-        <div class="contact__main">
-          <p class="label">MAIL</p>
-          <p class="contact__mail"><a href="mailto:yui.kikuchi@yahoo.com" id="mail">yui.kikuchi@yahoo.com</a></p>
-          <p class="contact__act">
-            <a class="btn" href="mailto:yui.kikuchi@yahoo.com?subject=%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%88METASYSTEM%EF%BC%89"><span>メールを書く</span><i aria-hidden="true">→</i></a>
-            <button class="btn btn--line" id="copy" type="button" data-copy="yui.kikuchi@yahoo.com"><span>アドレスをコピー</span></button>
-          </p>
-          <p class="contact__ok" aria-hidden="true">導通を確認しました。あとは、メール1通です。</p>
+    <article class="page" id="petnavi">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">ペットナビ</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-box"/></svg>Web ＋ アプリ</li><li>iOS / Android</li></ul>
+        <p class="lead">全国の、ペットと泊まれる宿・ペットと行けるカフェ・ドッグランを探せるサービス</p>
+
+        <div class="stage">
+          <ul class="stats stats--3">
+            <li><span>宿</span><b>1,930<small>件</small></b></li>
+            <li><span>カフェ</span><b>1,272<small>件</small></b></li>
+            <li><span>ドッグラン</span><b>91<small>件</small></b></li>
+          </ul>
+          <p class="fine">件数は 2026年10〜11月時点。</p>
+          <dl class="spec">
+            <div><dt>概要</dt><dd>宿は条件（小型犬OK・同室OK・温泉など）とエリアで絞りこみ、地図からも探せます。アプリは Web 版と同じデータを読むので、アプリ側の更新作業がいりません。</dd></div>
+            <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
+            <div><dt>技術</dt><dd>Flutter（アプリ）／ Supabase ／ GitHub Actions</dd></div>
+            <div><dt>URL</dt><dd><a href="https://petsnavi.com/" target="_blank" rel="noopener">petsnavi.com<svg class="i"><use href="#i-out"/></svg></a></dd></div>
+          </dl>
         </div>
-        <ul class="contact__links">
-          <li><a href="https://github.com/yuikikuchi" target="_blank" rel="noopener"><small>GITHUB</small><b>github.com/yuikikuchi</b><i aria-hidden="true">↗</i></a></li>
-          <li><a href="https://workuru.app/" target="_blank" rel="noopener"><small>PRODUCT</small><b>workuru.app</b><i aria-hidden="true">↗</i></a></li>
-        </ul>
-      </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">PRODUCT</em></p>
+          <h2>データは自動で更新</h2>
+          <p>宿は毎月、カフェは毎週、ドッグランは毎月、イベントは毎日。GitHub Actions が取りこんで、Web とアプリの両方に反映します。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>人が手で更新しなくても、情報が古くならないしくみにしています。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>Web 版とアプリが、同じデータを読む</li>
+          <li>データの更新は、すべて自動</li>
+          <li>圏外でも、前回の内容で使える</li>
+        </ul></section>
+      </aside>
+    </article>
 
-      <ol class="flow rv" aria-label="ご依頼までの流れ">
-        <li><b>ご連絡</b><span>案件の概要を共有</span></li>
-        <li><b>スキルシート・面談</b><span>オンライン／対面</span></li>
-        <li><b>条件のご相談</b><span>契約形態・稼働</span></li>
-        <li><b>契約・稼働開始</b><span>すぐに動きます</span></li>
-      </ol>
-    </section>
+    <article class="page" id="smaholic">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">smaholic</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-box"/></svg>Web サイト</li></ul>
+        <p class="lead">全国のスマホ修理店を、地図・都道府県・駅・機種から探せるサイト</p>
+
+        <div class="stage">
+          <dl class="spec">
+            <div><dt>概要</dt><dd>地図、エリア、駅の周辺、機種、チェーンから修理店を探せます。店舗ページ・エリア別・駅別・機種別のページを、ビルドのときにすべて書き出します。</dd></div>
+            <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
+            <div><dt>技術</dt><dd>Next.js（静的エクスポート）／ Cloudflare Pages ／ GitHub Actions</dd></div>
+            <div><dt>URL</dt><dd><a href="https://smaholic.com/" target="_blank" rel="noopener">smaholic.com<svg class="i"><use href="#i-out"/></svg></a></dd></div>
+          </dl>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">PRODUCT</em></p>
+          <h2>店舗データは週1回、自動で同期</h2>
+          <p>各チェーンの公式サイトから店舗一覧を取りこみます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>店舗数が急に減ったときは、反映をやめてメールで知らせます。こわれたデータを公開しないためです。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>静的サイトとして書き出して配信</li>
+          <li>店舗データは毎週、自動で同期</li>
+          <li>異常を見つけたら、反映せずに知らせる</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="journal">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">じゃ〜なる</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-box"/></svg>Web ×4 ＋ アプリ</li><li>iOS / Android</li></ul>
+        <p class="lead">山形県の4地域（置賜・村山・最上・庄内）のニュースサイトと、まとめて読めるアプリ「山形じゃ〜なる」</p>
+
+        <div class="stage">
+          <dl class="spec">
+            <div><dt>概要</dt><dd>1つのプログラムとデータベースを、4つのサイトで共有しています。アプリは4サイトと同じ記事を読み、保存した記事は圏外でも読めます。</dd></div>
+            <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
+            <div><dt>技術</dt><dd>Next.js ／ Supabase ／ GitHub Actions ／ Flutter（アプリ）</dd></div>
+            <div><dt>URL</dt><dd class="spec__links">
+              <a href="https://okitama.yamagata.news/" target="_blank" rel="noopener">置賜<svg class="i"><use href="#i-out"/></svg></a>
+              <a href="https://murayama.yamagata.news/" target="_blank" rel="noopener">村山<svg class="i"><use href="#i-out"/></svg></a>
+              <a href="https://mogami.yamagata.news/" target="_blank" rel="noopener">最上<svg class="i"><use href="#i-out"/></svg></a>
+              <a href="https://shonai.yamagata.news/" target="_blank" rel="noopener">庄内<svg class="i"><use href="#i-out"/></svg></a>
+            </dd></div>
+          </dl>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">PRODUCT</em></p>
+          <h2>1つのプログラムで、4つのサイト</h2>
+          <p>地域ごとの違いは設定で切りかえます。直すときも1か所ですみます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>記事はニュースボットが毎日2回、自動で追加します。デプロイも1回の push で4地域ぶん。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>1つのプログラムで、4つのサイトを運用</li>
+          <li>記事の追加は、毎日2回の自動投稿</li>
+          <li>アプリは、サイトと同じ記事を読む</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <!-- ══════════ 07. ご依頼 ══════════ -->
+    <article class="page" id="terms">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">契約形態・稼働条件</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-sliders"/></svg>4 項目</li></ul>
+        <p class="lead">案件の規模・体制・商流に合わせて、柔軟に対応します。</p>
+
+        <div class="stage">
+          <dl class="spec spec--wide">
+            <div><dt>契約形態</dt><dd>SES / 準委任契約 / 一括請負　いずれも対応可</dd></div>
+            <div><dt>商流</dt><dd>深い商流でも対応可。直接契約も相談可</dd></div>
+            <div><dt>稼働形態</dt><dd>リモート中心 / 客先常駐も相談可。週5日〜、月140h〜</dd></div>
+            <div><dt>進捗・報告</dt><dd>日報・週報対応、Backlog / Redmine / JIRA等の利用実績あり</dd></div>
+          </dl>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">TERMS</em></p>
+          <h2>SES・準委任・請負のどれでも</h2>
+          <p>商流が深くても対応できます。直接契約もご相談ください。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>リモート中心。客先常駐もご相談いただけます。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>SES・準委任・一括請負に対応</li>
+          <li>週5日〜、月140時間〜</li>
+          <li>日報・週報で進捗を報告</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="flow">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">ご発注までの流れ</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-flag"/></svg>4 ステップ</li></ul>
+        <p class="lead">まずはスキルシートのご確認から。</p>
+
+        <div class="stage">
+          <ol class="pipe pipe--4" data-steps data-unit="ステップ">
+            <li data-tag="STEP 1"><svg class="i"><use href="#i-doc"/></svg><b>スキルシート提出</b><p>案件概要のご共有</p></li>
+            <li data-tag="STEP 2"><svg class="i"><use href="#i-chat"/></svg><b>面談</b><p>オンライン / 対面</p></li>
+            <li data-tag="STEP 3"><svg class="i"><use href="#i-sliders"/></svg><b>条件調整</b><p>契約形態・稼働条件</p></li>
+            <li data-tag="STEP 4"><svg class="i"><use href="#i-flag"/></svg><b>契約・稼働開始</b><p>迅速対応</p></li>
+          </ol>
+          <p class="callout"><b>まずはスキルシートのご確認から。</b>単発の工程支援から長期常駐まで、幅広くご相談に対応します。</p>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note" data-step-panel>
+          <p class="note__top"><span>POINT</span><em class="tag">FLOW</em></p>
+          <h2>4つのステップ</h2>
+          <p>図のステップを押すか、「次へ」で1つずつ進めます。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>単発の工程支援から長期常駐まで、ご相談いただけます。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>スキルシート → 面談 → 条件調整 → 稼働開始</li>
+          <li>面談はオンラインでも対面でも</li>
+          <li>稼働開始まで、すばやく対応</li>
+        </ul></section>
+      </aside>
+    </article>
+
+    <article class="page" id="contact">
+      <section class="lesson card">
+        <p class="crumb"></p>
+        <h1 class="title">お問い合わせ</h1>
+        <ul class="chips"><li><svg class="i"><use href="#i-mail"/></svg>メールで受付</li></ul>
+        <p class="lead">ご質問・ご相談はお気軽に。スキルシートは、メールでお送りします。</p>
+
+        <div class="stage">
+          <ul class="contacts">
+            <li>
+              <svg class="i"><use href="#i-mail"/></svg>
+              <p><small>メール</small><a href="mailto:yui.kikuchi@yahoo.com" id="mail">yui.kikuchi@yahoo.com</a></p>
+              <span class="contacts__act">
+                <a class="btn btn--go" href="mailto:yui.kikuchi@yahoo.com?subject=%E3%81%94%E7%9B%B8%E8%AB%87%EF%BC%88METASYSTEM%EF%BC%89">メールを書く<svg class="i"><use href="#i-right"/></svg></a>
+                <button class="btn" type="button" id="copy" data-copy="yui.kikuchi@yahoo.com"><svg class="i"><use href="#i-copy"/></svg><span>コピー</span></button>
+              </span>
+            </li>
+            <li>
+              <svg class="i"><use href="#i-code"/></svg>
+              <p><small>GitHub</small><a href="https://github.com/yuikikuchi" target="_blank" rel="noopener">github.com/yuikikuchi</a></p>
+              <span class="contacts__act"><a class="btn" href="https://github.com/yuikikuchi" target="_blank" rel="noopener">開く<svg class="i"><use href="#i-out"/></svg></a></span>
+            </li>
+          </ul>
+          <p class="fine">Yui Kikuchi ｜ システムエンジニア（フリーランス）｜ 屋号 METASYSTEM</p>
+        </div>
+      </section>
+      <aside class="panel">
+        <section class="card note">
+          <p class="note__top"><span>POINT</span><em class="tag">CONTACT</em></p>
+          <h2>まずは、案件の概要を</h2>
+          <p>「この工程だけ」「まずは話だけ」でも大丈夫です。メールでご連絡ください。</p>
+          <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>面談は、オンラインでも対面でも対応します。</p></div></div>
+        </section>
+        <section class="card learn"><h2>このページでわかること</h2><ul>
+          <li>連絡はメールで</li>
+          <li>スキルシートをお送りします</li>
+          <li>GitHub のアカウント</li>
+        </ul></section>
+      </aside>
+    </article>
+
   </main>
-
-  <footer class="foot">
-    <p class="foot__end">END OF DRAWING <span>— 以上 —</span></p>
-    <div class="foot__row">
-      <p>© 2026 METASYSTEM ／ Yui Kikuchi</p>
-      <p>このページは、ライブラリを使わない HTML・CSS・JavaScript だけで結線しています。</p>
-      <p><a href="#top">図面の先頭へ ↑</a></p>
-    </div>
-  </footer>
-
-  <svg class="wires wires--front" id="wiresFront" aria-hidden="true" focusable="false"></svg>
-  <canvas class="pulse pulse--over" id="pulseOver" aria-hidden="true"></canvas>
-</div>
 </div>
 
-<script src="assets/js/main.js?v=2" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>

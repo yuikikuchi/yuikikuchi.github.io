@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <!-- METASYSTEM の印：かっこ（ハーネス）が、点（モデル）を囲む -->
-  <rect width="32" height="32" rx="6" fill="#131518"/>
-  <path d="M12 8H8v16h4M20 8h4v16h-4" fill="none" stroke="#F2EFE6" stroke-width="2.6" stroke-linecap="square"/>
-  <circle cx="16" cy="16" r="3.5" fill="#FFD23F"/>
+  <!-- METASYSTEM の印：かっこが、点を囲む -->
+  <rect width="32" height="32" rx="7" fill="#1e1c19"/>
+  <path d="M12 9H9v14h3M20 9h3v14h-3" fill="none" stroke="#f5ede1" stroke-width="2.4" stroke-linecap="square"/>
+  <circle cx="16" cy="16" r="3.2" fill="#cbe4b0"/>
 </svg>

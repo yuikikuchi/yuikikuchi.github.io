@@ -3,47 +3,33 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>404 断線｜METASYSTEM</title>
+<title>404 ページが見つかりません｜METASYSTEM</title>
 <meta name="robots" content="noindex">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<script>
-(function () {
-  try {
-    var t = localStorage.getItem('ms-theme');
-    if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
-  } catch (e) {}
-})();
-</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=IBM+Plex+Mono:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=2">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=M+PLUS+1+Code:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/style.css?v=4">
 <style>
   /* このページだけの組み。色と書体は style.css のものを使う */
-  .lost { min-height: 100vh; min-height: 100svh; display: grid; align-content: center; gap: 22px; padding: 48px clamp(20px, 7vw, 120px); }
-  .lost .lost__code { color: var(--ink); font-family: var(--f-disp); font-stretch: 125%; font-weight: 800; font-size: clamp(88px, 24vw, 300px); line-height: .84; letter-spacing: -.03em; margin-left: -.04em; }
-  .lost svg { width: min(100%, 760px); height: auto; overflow: visible; }
-  .lost svg path { fill: none; stroke-linecap: round; }
-  .lost .edge { stroke: var(--wire-edge); stroke-width: 9; }
-  .lost .on { stroke: var(--w-guard); stroke-width: 5.6; }
-  .lost .off { stroke: var(--wire-off); stroke-width: 5.6; }
-  .lost .spark { stroke: var(--ink); stroke-width: 2; }
-  .lost h1 { font-size: clamp(24px, 3.4vw, 42px); font-weight: 900; line-height: 1.4; }
-  .lost p { max-width: 36em; color: var(--ink-2); }
+  .lost { min-height: 100vh; min-height: 100svh; display: grid; place-content: center; padding: 24px 16px; }
+  .lost .card { max-width: 520px; padding: 24px 26px 26px; }
+  .lost small { font-size: 12px; color: var(--mute); }
+  .lost b { display: block; margin-top: 4px; font-size: 56px; font-weight: 800; line-height: 1.2; }
+  .lost h1 { margin-top: 4px; font-size: 18px; font-weight: 800; }
+  .lost p { margin-top: 8px; font-size: 13px; color: var(--mute); }
+  .lost .btn { margin-top: 18px; }
 </style>
 </head>
 <body>
 <main class="lost">
-  <p class="label">ERROR ／ OPEN CIRCUIT</p>
-  <p class="lost__code" aria-hidden="true">404</p>
-  <svg viewBox="0 0 760 44" aria-hidden="true">
-    <path class="edge" d="M6 22H330"/><path class="on" d="M6 22H330"/>
-    <path class="edge" d="M430 22H754"/><path class="off" d="M430 22H754"/>
-    <path class="spark" d="M352 8l10 10M372 2v14M392 8l-10 10M352 36l10-10M392 36l-10-10"/>
-  </svg>
-  <h1>この先は、断線しています。</h1>
-  <p>お探しのページは、結線図に載っていません。移動したか、はじめから無かった可能性があります。</p>
-  <p><a class="btn" href="/"><span>図面の先頭へ戻る</span><i aria-hidden="true">→</i></a></p>
+  <div class="card">
+    <small>~/Portfolio/404</small>
+    <b>404</b>
+    <h1>ページが見つかりません</h1>
+    <p>お探しのページは、移動したか、はじめから無かった可能性があります。</p>
+    <a class="btn btn--go" href="/">トップへ戻る</a>
+  </div>
 </main>
 </body>
 </html>

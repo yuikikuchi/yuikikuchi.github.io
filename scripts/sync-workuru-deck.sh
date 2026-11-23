@@ -37,7 +37,8 @@ for fig in re.findall(r'<figure class="deck-slide">.*?</figure>', lp, flags=re.S
 if not slides:
     sys.exit('LP の #deck に、スライドの一覧が見つかりません')
 
-SIZES = '(max-width: 719px) calc(100vw - 110px), (max-width: 1199px) calc(100vw - 250px), 980px'
+# スライドの表示の幅（style.css の組みと対）：スマホは画面いっぱい、ツリーだけ出る幅、3列の幅
+SIZES = '(max-width: 859px) calc(100vw - 74px), (max-width: 1239px) calc(100vw - 400px), (max-width: 1560px) calc(100vw - 704px), 856px'
 rows = []
 for i, (n, alt) in enumerate(slides):
     rows.append(
