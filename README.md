@@ -36,7 +36,7 @@ JavaScript がないときは、全部のページが上から順に並ぶ。
 工程やステップの図は `<ol class="pipe" data-steps>`。`<li>` を1つずつ進み、右のパネル（`data-step-panel` のついたカード）に、その `<b>` と `<p>` を出す。
 
 - アイコンは `<svg class="i"><use href="#i-名前"/></svg>`。絵は `index.html` の先頭の `<symbol>`。
-- CSS・JS を直したら、`index.html` と `404.html` の `?v=4` の数字を上げる（古いキャッシュを読ませないため）。
+- CSS・JS を直したら、`index.html` と `404.html` の `?v=` の数字を上げる（古いキャッシュを読ませないため）。
 
 ## WORKURU の紹介資料を更新するとき
 

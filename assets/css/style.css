@@ -114,7 +114,8 @@ html:not(.js) .progress, html:not(.js) .crumb { display: none; }
 .page { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; margin-bottom: 24px; }
 .js .page { display: none; margin-bottom: 0; }
 .js .page.is-on { display: grid; grid-template-columns: minmax(0, 1fr) var(--panel-w); align-items: start; animation: in .22s ease-out; }
-@keyframes in { from { opacity: 0; transform: translateY(6px); } }
+/* 位置は動かさない（#id へ飛ぶときに、動いている途中の位置へスクロールしてしまうので） */
+@keyframes in { from { opacity: 0; } }
 
 /* 中央：ページ */
 .lesson { display: grid; grid-template-columns: minmax(0, 1fr) auto; column-gap: 16px; padding: 18px 20px 20px; }
