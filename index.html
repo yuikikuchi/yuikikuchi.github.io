@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=M+PLUS+1+Code:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=6">
+<link rel="stylesheet" href="assets/css/style.css?v=7">
 
 <script type="application/ld+json">
 {
@@ -72,6 +72,9 @@
   <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
   <symbol id="i-idea" viewBox="0 0 24 24"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z"/></symbol>
   <symbol id="i-chat" viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></symbol>
+  <symbol id="i-replay" viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.4-5.7M4 4v5h5"/></symbol>
+  <symbol id="i-pause" viewBox="0 0 24 24"><path d="M9 5v14M15 5v14"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M7 5l12 7-12 7z"/></symbol>
 </svg>
 
 <a class="skip" href="#main">本文へ移動</a>
@@ -275,7 +278,32 @@
         <ul class="chips"><li><svg class="i"><use href="#i-route"/></svg>6 工程</li><li><svg class="i"><use href="#i-check"/></svg>どの工程からでも</li></ul>
         <p class="lead">要件定義から保守・運用まで、すべての工程に対応します。</p>
 
-        <div class="stage">
+        <!-- 工程の図：main.js が座標から計算して SVG に描く。工程を進めると、システムが1つずつ組み上がる -->
+        <div class="stage stage--viz">
+          <div class="viz" data-viz>
+            <ul class="viz__tiles" aria-label="ここまでにできる成果物">
+              <li data-v="1:作成"><small><svg class="i"><use href="#i-doc"/></svg>要件定義書</small><b>—</b></li>
+              <li data-v="2:外部設計|3:外部・詳細"><small><svg class="i"><use href="#i-layers"/></svg>設計書</small><b>—</b></li>
+              <li data-v="4:単体テスト済"><small><svg class="i"><use href="#i-code"/></svg>ソースコード</small><b>—</b></li>
+              <li data-v="5:結合・総合 OK"><small><svg class="i"><use href="#i-check"/></svg>テスト結果</small><b>—</b></li>
+              <li data-v="6:整備済"><small><svg class="i"><use href="#i-pulse"/></svg>運用手順書</small><b>—</b></li>
+            </ul>
+            <svg class="viz__svg" viewBox="0 0 760 370" role="img" aria-labelledby="vizTitle"><title id="vizTitle">工程を進めるごとに、お客さまの要件から、画面・アプリ・DB・運用までが組み上がっていく図</title></svg>
+            <div class="viz__foot">
+              <ul class="viz__legend">
+                <li><i class="lg-hot"></i>いまの工程</li>
+                <li><i class="lg-draft"></i>設計中</li>
+                <li><i class="lg-flow"></i>データの流れ</li>
+              </ul>
+              <p class="viz__ctl">
+                <button class="btn btn--sm" type="button" data-replay><svg class="i"><use href="#i-replay"/></svg>もう一度</button>
+                <button class="btn btn--sm" type="button" data-pause aria-pressed="false"><svg class="i"><use href="#i-pause"/></svg><span>一時停止</span></button>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="stage stage--steps">
+          <p class="steps__head"><b>工程の流れ</b><span data-steps-now></span></p>
           <ol class="pipe" data-steps data-unit="工程">
             <li data-tag="上流工程"><svg class="i"><use href="#i-chat"/></svg><b>要件定義</b><p>業務ヒアリング・要件整理・要件定義書作成</p></li>
             <li data-tag="上流工程"><svg class="i"><use href="#i-doc"/></svg><b>基本設計</b><p>画面設計・機能設計・外部設計書作成</p></li>
@@ -290,7 +318,7 @@
         <section class="card note" data-step-panel>
           <p class="note__top"><span>POINT</span><em class="tag">PROCESS</em></p>
           <h2>上流から運用まで</h2>
-          <p>図の工程を押すか、「次へ」で1つずつ進めます。</p>
+          <p>工程を押すか、「次へ」で1つずつ進めます。</p>
           <div class="idea"><svg class="i"><use href="#i-idea"/></svg><div><small>KEY IDEA</small><p>特定の工程だけの支援にも、最初から最後までの参画にも対応します。</p></div></div>
         </section>
         <section class="card learn"><h2>このページでわかること</h2><ul>
@@ -814,6 +842,6 @@
   </main>
 </div>
 
-<script src="assets/js/main.js?v=4" defer></script>
+<script src="assets/js/main.js?v=7" defer></script>
 </body>
 </html>
