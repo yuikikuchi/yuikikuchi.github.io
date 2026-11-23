@@ -2,5 +2,5 @@
   <!-- METASYSTEM の印：かっこが、点を囲む -->
   <rect width="32" height="32" rx="7" fill="#1e1c19"/>
   <path d="M12 9H9v14h3M20 9h3v14h-3" fill="none" stroke="#f5ede1" stroke-width="2.4" stroke-linecap="square"/>
-  <circle cx="16" cy="16" r="3.2" fill="#cbe4b0"/>
+  <circle cx="16" cy="16" r="3.2" fill="#f39c4e"/>
 </svg>

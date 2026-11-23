@@ -8,7 +8,7 @@ METASYSTEM（Yui Kikuchi）の実績ポートフォリオ（https://yuikikuchi.g
 ```
 index.html            全ページの本文（文章を直すのはここ）。アイコンの絵（<symbol>）も先頭にある
 404.html              見つからないページ
-assets/css/style.css  見た目。色は先頭の :root の4色（墨・生成り・砂・若草）
+assets/css/style.css  見た目。色は先頭の :root（墨・生成り・砂、差し色はオレンジと青）
 assets/js/main.js     ページの切りかえ・ツリー・進み具合・工程の図・紹介資料のめくり
 assets/img/og.png     SNS で共有されたときの画像（1200×630）
 assets/workuru/       WORKURU の紹介資料（スライドの画像と PDF）。ワークルのリポジトリから写したもの
