@@ -198,9 +198,9 @@
       }
     },
 
-    /* 02 自己紹介：10段の階段（10年）と、8本の旗（参画プロジェクト） */
+    /* 02 自己紹介：10段の階段（10年）と、10本の旗（参画プロジェクト） */
     profile: {
-      h: 300, items: '.stats--2 > li', labels: ['実務経験 10年', '参画プロジェクト 8件以上'], title: '10段の階段で実務経験10年を、8本の旗で参画プロジェクト8件以上を表した図',
+      h: 300, items: '.stats--2 > li', labels: ['実務経験 10年', '参画プロジェクト 10件以上'], title: '10段の階段で実務経験10年を、10本の旗で参画プロジェクト10件以上を表した図',
       build(L) {
         const { at, P, g, cube, person, pill, flag } = L;
         const b0 = at(225, 250);
@@ -209,11 +209,12 @@
           g(`class="seq" style="--d:${(i * 0.08).toFixed(2)}s"${i === 9 ? ' data-hot="1"' : ''}`, cube(x - 0.55, y - 0.55, 0, 1.1, 1.1, h))).join('');
         const top = st[9];
         const [tx, ty] = P(top.x, top.y, top.h);
-        const flags = st.slice(1, 9).map(({ x, y, h }, k) => { const [fx, fy] = P(x, y, h); return g(`class="seq" style="--d:${(k * 0.12).toFixed(2)}s"`, flag(fx - 3, fy - 2)); }).join('');
+        // 旗は1段に1本。いちばん上の段は人が立っているので、旗を右へずらす
+        const flags = st.map(({ x, y, h }, k) => { const [fx, fy] = P(x, y, h); return g(`class="seq" style="--d:${(k * 0.1).toFixed(2)}s"`, flag(fx + (k === 9 ? 15 : -3), fy - 2)); }).join('');
         return g('data-pop="1"', blocks) + person([top.x, top.y], top.h) +
           g('data-in="2" data-hot="2" data-pop="2"', flags) +
           pill(tx, ty - 62, '10年', 'data-hot="1"') +
-          pill(235, 150, '8件以上', 'data-in="2" data-hot="2"');
+          pill(235, 150, '10件以上', 'data-in="2" data-hot="2"');
       }
     },
 
@@ -698,6 +699,36 @@
           g('data-only="2" data-hot="2"', win(300, 40, 160, 84, '', codeLines(312, 64, [70, 96, 52, 84, 60]))) +
           g('data-only="2"', pill(380, 146, 'github.com/yuikikuchi')) +
           under(Y, 'あなた') + under(M, 'Yui Kikuchi');
+      }
+    },
+
+    /* 07 事業者情報：真ん中の事務所（METASYSTEM）、左に代表者、右に運営サービス。表の行ごとに、対応する所が光る */
+    business: {
+      h: 300, items: '.spec > div', title: '屋号 METASYSTEM の事務所を中心に、代表者・事業内容・運営サービス・所在地・連絡先を、表の行ごとに表した図',
+      build(L) {
+        const { at, Sc, g, slab, building, person, modules, pill, under, seg, line, packets, mover, arc, spark, gear, miniCube, pin, lock, envMini, win, codeLines } = L;
+        const O = at(380, 175);
+        const Pn = at(165, 205);
+        const Sv = at(600, 205);
+        const sPO = seg(Pn, O, 1.8, 2.0);
+        const sOS = seg(O, Sv, 2.0, 1.8);
+        const [px, py] = Sc(Pn, 2.4);
+        const [sx, sy] = Sc(Sv);
+        const work = [[215, 'AI駆動開発の導入', spark(215, 82)], [380, 'システム開発の支援', gear(380, 80, 15)], [545, 'サービスの企画・運営', `<g transform="translate(545 80) scale(1.5)">${miniCube()}</g>`]]
+          .map(([x, s, icon], i) => `<g ${L.seq(i, 0.15)}>${icon}${pill(x, 40, s)}</g>`).join('');
+        const mail = arc([30, 92], [px - 8, py - 6], 40);
+        return line(sPO, 'data-hot="2"', 'link link--soft') +
+          line(sOS, 'data-hot="4"', 'link link--soft') + g('data-only="4"', packets(sOS, 3, 1.5)) +
+          g('data-hot="1 3 5"', slab(O, 3.0) + building(O, 2.0, 2.0, 2.4)) +
+          g('data-hot="2 6 7"', slab(Pn) + person(Pn)) +
+          g('data-hot="4"', slab(Sv) + g('data-pop="4"', modules(Sv))) +
+          g('data-only="3" data-pop="3"', work) +
+          g('data-only="4"', pill(sx, sy - 92, 'WORKURU ほか 4つ')) +
+          g('data-only="5" data-pop="5"', pin(380, 80) + lock(408, 88)) + g('data-only="5"', pill(380, 40, 'ご請求があればお知らせします')) +
+          g('data-only="6"', mover(mail, envMini(), 2.0) + mover(mail, envMini(), 2.0, 1.0) + pill(205, 40, 'yui.kikuchi@yahoo.com')) +
+          g('data-only="7" data-hot="7" data-pop="7"', win(430, 34, 140, 76, '', codeLines(442, 58, [62, 88, 46, 74, 54]))) +
+          g('data-only="7"', pill(500, 132, 'github.com/yuikikuchi')) +
+          under(O, 'METASYSTEM', 'data-hot="1"', 3.0) + under(Pn, 'Yui Kikuchi', 'data-hot="2"') + under(Sv, '運営サービス', 'data-hot="4"');
       }
     }
   };
