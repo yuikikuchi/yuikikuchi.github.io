@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=M+PLUS+1+Code:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=7">
+<link rel="stylesheet" href="assets/css/style.css?v=8">
 
 <script type="application/ld+json">
 {
@@ -173,6 +173,7 @@
         <p class="lead">要件定義・設計・開発・テスト・保守運用 ／ SES・準委任・請負対応。システムエンジニア Yui Kikuchi（屋号 METASYSTEM）の、実績と仕事の進め方をまとめたポートフォリオです。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="about"></div>
           <ul class="stats">
             <li><span>実務経験</span><b>10<small>年</small></b></li>
             <li><span>参画プロジェクト</span><b>8<small>件以上</small></b></li>
@@ -214,6 +215,7 @@
         <p class="lead">Yui Kikuchi ｜ システムエンジニア（フリーランス）｜ 屋号 METASYSTEM</p>
 
         <div class="stage">
+          <div class="viz" data-viz="profile"></div>
           <ul class="stats stats--2">
             <li><span>Years of Experience</span><b>10<small>年</small></b><em>システム開発 実務経験年数</em></li>
             <li><span>Projects Joined</span><b>8<small>件以上</small></b><em>参画プロジェクト数</em></li>
@@ -247,6 +249,7 @@
         <p class="lead">いまある体制に、そのまま加われること。それが、選んでいただいている理由です。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="why"></div>
           <ol class="cards3">
             <li><svg class="i"><use href="#i-shield"/></svg><h2>体制への適応力</h2><p>既存の開発体制・規約・レビュープロセスに合わせて稼働</p></li>
             <li><svg class="i"><use href="#i-chat"/></svg><h2>報連相の徹底</h2><p>日報・週報・課題管理を確実に運用し、リスクの早期共有を徹底</p></li>
@@ -280,7 +283,7 @@
 
         <!-- 工程の図：main.js が座標から計算して SVG に描く。工程を進めると、システムが1つずつ組み上がる -->
         <div class="stage stage--viz">
-          <div class="viz" data-viz>
+          <div class="viz" data-viz="process">
             <ul class="viz__tiles" aria-label="ここまでにできる成果物">
               <li data-v="1:作成"><small><svg class="i"><use href="#i-doc"/></svg>要件定義書</small><b>—</b></li>
               <li data-v="2:外部設計|3:外部・詳細"><small><svg class="i"><use href="#i-layers"/></svg>設計書</small><b>—</b></li>
@@ -338,6 +341,7 @@
         <p class="lead">要件定義・基本設計フェーズからの参画</p>
 
         <div class="stage">
+          <div class="viz" data-viz="upstream"></div>
           <ul class="works">
             <li><span class="tag">官公庁</span><h2>ホストマイグレーション 要件定義支援</h2><p>現行業務フローのヒアリングから要件定義書・RFP対応資料を作成。</p><dl><div><dt>体制</dt><dd>100名規模</dd></div><div><dt>役割</dt><dd>アーキテクト</dd></div></dl></li>
             <li><span class="tag">金融</span><h2>基幹システム モダナイゼーション</h2><p>画面設計書・機能設計書を規定フォーマットで作成。レビュー指摘対応まで一貫して対応。</p></li>
@@ -369,6 +373,7 @@
         <p class="lead">規約遵守と品質担保を両立した製造工程</p>
 
         <div class="stage">
+          <div class="viz" data-viz="dev"></div>
           <ul class="works">
             <li><span class="tag">EC</span><h2>業務システム 新規開発</h2><p>詳細設計書に基づく製造・単体テスト。コーディング規約 / レビュー体制に準拠。</p></li>
             <li><span class="tag">小売</span><h2>既存システム改修</h2><p>影響範囲調査 → 改修 → 回帰テストまで対応。障害の再発防止策を提案。</p></li>
@@ -401,6 +406,7 @@
         <p class="lead">止められないシステムを支える運用対応</p>
 
         <div class="stage">
+          <div class="viz" data-viz="ops"></div>
           <ul class="works works--2">
             <li><h2>障害対応・一次切り分け</h2><p>本番障害発生時の一次切り分け、原因調査、復旧対応、報告書作成。</p></li>
             <li><h2>定期リリース対応</h2><p>月次・週次のリリース作業、リリース手順書作成、切り戻し対応。</p></li>
@@ -432,6 +438,7 @@
         <p class="lead">参画した現場で、何がどう変わったか。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="impact"></div>
           <div class="ba">
             <p class="ba__head"><span>Before ｜ 参画前</span><span>After ｜ 参画後</span></p>
             <ul>
@@ -468,6 +475,7 @@
         <p class="lead">レガシーからモダンまで。オンプレミスにもクラウドにも対応します。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="stack"></div>
           <dl class="stack">
             <div><dt>言語</dt><dd><span>Java</span><span>COBOL</span><span>Go</span><span>Python</span><span>React (TypeScript)</span></dd></div>
             <div><dt>フレームワーク</dt><dd><span>Spring</span><span>Spring Boot</span><span>Next.js</span></dd></div>
@@ -501,6 +509,7 @@
         <p class="lead">品質と納期を守るための、効率化の手段として使います。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="ai"></div>
           <ul class="works works--2">
             <li><h2>ハーネスエンジニアリング</h2><p>AIエージェントが現場のルール・工程・既存システムの文脈の中で動けるよう、読ませるもの・使わせる道具・権限・検証のしくみを整え、より効果的な開発を実現</p></li>
             <li><h2>既存コード・ドキュメントの解析</h2><p>生成AIを活用したレガシーコード解析・仕様書化で、調査工数を削減</p></li>
@@ -533,6 +542,7 @@
         <p class="lead">客先の規程と環境に合わせて作業します。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="security"></div>
           <ol class="cards3">
             <li><svg class="i"><use href="#i-shield"/></svg><h2>秘密保持・情報管理</h2><p>NDA締結を前提とした対応。客先の情報取扱規程を遵守</p></li>
             <li><svg class="i"><use href="#i-sliders"/></svg><h2>セキュリティ規定への準拠</h2><p>客先の開発環境・セキュリティ規定に応じた作業端末/VPN等の対応</p></li>
@@ -564,6 +574,7 @@
         <p class="lead">現場スタッフの配置・打刻・日報アプリ</p>
 
         <div class="stage">
+          <div class="viz" data-viz="workuru"></div>
           <dl class="spec">
             <div><dt>概要</dt><dd>配置を決めると本人のアプリに通知が届き、打刻・日報・写真・交通費の申請までアプリ1つにまとまる、現場スタッフ管理のサービス。</dd></div>
             <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
@@ -638,6 +649,7 @@
         <p class="lead">全国の、ペットと泊まれる宿・ペットと行けるカフェ・ドッグランを探せるサービス</p>
 
         <div class="stage">
+          <div class="viz" data-viz="petnavi"></div>
           <ul class="stats stats--3">
             <li><span>宿</span><b>1,930<small>件</small></b></li>
             <li><span>カフェ</span><b>1,272<small>件</small></b></li>
@@ -675,6 +687,7 @@
         <p class="lead">全国のスマホ修理店を、地図・都道府県・駅・機種から探せるサイト</p>
 
         <div class="stage">
+          <div class="viz" data-viz="smaholic"></div>
           <dl class="spec">
             <div><dt>概要</dt><dd>地図、エリア、駅の周辺、機種、チェーンから修理店を探せます。店舗ページ・エリア別・駅別・機種別のページを、ビルドのときにすべて書き出します。</dd></div>
             <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
@@ -706,6 +719,7 @@
         <p class="lead">山形県の4地域（置賜・村山・最上・庄内）のニュースサイトと、まとめて読めるアプリ「山形じゃ〜なる」</p>
 
         <div class="stage">
+          <div class="viz" data-viz="journal"></div>
           <dl class="spec">
             <div><dt>概要</dt><dd>1つのプログラムとデータベースを、4つのサイトで共有しています。アプリは4サイトと同じ記事を読み、保存した記事は圏外でも読めます。</dd></div>
             <div><dt>担当</dt><dd>企画・設計・開発・運用</dd></div>
@@ -743,6 +757,7 @@
         <p class="lead">案件の規模・体制・商流に合わせて、柔軟に対応します。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="terms"></div>
           <dl class="spec spec--wide">
             <div><dt>契約形態</dt><dd>SES / 準委任契約 / 一括請負　いずれも対応可</dd></div>
             <div><dt>商流</dt><dd>深い商流でも対応可。直接契約も相談可</dd></div>
@@ -774,6 +789,7 @@
         <p class="lead">まずはスキルシートのご確認から。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="flow"></div>
           <ol class="pipe pipe--4" data-steps data-unit="ステップ">
             <li data-tag="STEP 1"><svg class="i"><use href="#i-doc"/></svg><b>スキルシート提出</b><p>案件概要のご共有</p></li>
             <li data-tag="STEP 2"><svg class="i"><use href="#i-chat"/></svg><b>面談</b><p>オンライン / 対面</p></li>
@@ -806,6 +822,7 @@
         <p class="lead">ご質問・ご相談はお気軽に。スキルシートは、メールでお送りします。</p>
 
         <div class="stage">
+          <div class="viz" data-viz="contact"></div>
           <ul class="contacts">
             <li>
               <svg class="i"><use href="#i-mail"/></svg>
@@ -842,6 +859,7 @@
   </main>
 </div>
 
-<script src="assets/js/main.js?v=7" defer></script>
+<script src="assets/js/scenes.js?v=8" defer></script>
+<script src="assets/js/main.js?v=8" defer></script>
 </body>
 </html>

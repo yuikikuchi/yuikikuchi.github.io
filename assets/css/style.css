@@ -199,9 +199,20 @@ kbd { display: inline-grid; place-items: center; min-width: 20px; height: 18px; 
 .pipe li.is-on b, .pipe li.is-on p { color: var(--ink); }
 .pipe li:hover > .i { border-color: var(--ink); }
 
-/* ───────── 対応工程の図（main.js が SVG を描く） ───────── */
+/* ───────── ページの図（scenes.js の絵を、main.js が SVG に描いて動かす） ───────── */
 .stage + .stage { margin-top: 12px; }
-html:not(.js) .stage--viz { display: none; }
+html:not(.js) .stage--viz, html:not(.js) .viz { display: none; }
+/* ページの中身の上に置く図 */
+.stage > .viz:not(:only-child) { margin-bottom: 16px; padding-bottom: 14px; border-bottom: 1px solid var(--line); }
+.viz__cap { display: flex; align-items: baseline; gap: 10px; min-width: 0; font-size: 12px; }
+.viz__cap b { flex: none; font-weight: 800; font-variant-numeric: tabular-nums; }
+.viz__cap span { color: var(--mute); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* 図と、いっしょに光る項目 */
+.is-pickable { cursor: pointer; }
+:is(.works, .cards3, .contacts, .stats) > li { transition: border-color .2s, box-shadow .2s; }
+:is(.works, .cards3, .contacts, .stats) > li.is-lit, .toc > li.is-lit > a { border-color: var(--ink); box-shadow: inset 4px 0 0 var(--accent); }
+.ba li, .stack > div, .spec > div { transition: background .2s; }
+.ba li.is-lit, .stack > div.is-lit, .spec > div.is-lit { background: var(--accent-soft); }
 .steps__head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 8px; font-size: 11px; font-weight: 700; letter-spacing: .08em; }
 .steps__head span { font-weight: 500; letter-spacing: 0; color: var(--mute); }
 .js .stage--steps .pipe p { display: none; }
@@ -216,8 +227,8 @@ html:not(.js) .stage--viz { display: none; }
 .viz__tiles li.is-new { border-color: var(--ink); box-shadow: inset 4px 0 0 var(--accent); }
 
 /* 中：図 */
-.viz__svg { display: block; width: 100%; height: auto; aspect-ratio: 760 / 370; margin-top: 10px; font-family: var(--f); }
-.viz.is-narrow .viz__svg { aspect-ratio: 3 / 2; }
+.viz__svg { display: block; width: 100%; height: auto; font-family: var(--f); }
+.viz__tiles + .viz__svg { margin-top: 10px; }
 .viz svg .grid { fill: none; stroke: var(--line); stroke-width: 1; opacity: .6; }
 .viz svg :is(polygon, path, ellipse, circle, rect) { stroke: var(--ink); stroke-width: 1.5; stroke-linejoin: round; stroke-linecap: round; }
 .viz svg [transform] * { vector-effect: non-scaling-stroke; }
@@ -230,13 +241,25 @@ html:not(.js) .stage--viz { display: none; }
 .viz svg .is-hot .f-top { fill: var(--accent); }
 .viz svg .is-hot .f-l { fill: var(--accent-soft); }
 .viz svg .is-hot .f-r { fill: #eca469; }
-.viz svg .is-hot .scr { fill: var(--card); }
+.viz svg .is-hot .scr { fill: var(--accent-soft); }
+.viz svg .is-hot :is(.cell, .cta) { fill: var(--accent); }
+.viz svg .is-hot .win { fill: var(--accent-soft); }
+/* 参画前・まだないもの：灰色の破線 */
+.viz svg :is(.before, .ghost) :is(.f-top, .f-l, .f-r) { fill: var(--paper); stroke: var(--mute); stroke-dasharray: 3 3; }
+.viz svg .before .pill rect { fill: var(--paper); stroke: var(--mute); stroke-dasharray: 3 3; }
+.viz svg .before .pill text, .viz svg .q { fill: var(--mute); }
 /* 設計中：青い破線（図面のまま、まだ作っていない） */
 .viz svg .is-draft :is(.f-top, .f-l, .f-r) { fill: rgba(111, 159, 234, .12); stroke: var(--accent2); stroke-dasharray: 4 4; }
 .viz svg .is-draft .band { stroke: var(--accent2); stroke-dasharray: 4 4; }
 /* 地面の線（お客さま → 画面 → アプリ → DB）と、流れるデータ */
 .viz svg .link { fill: none; stroke-width: 2; marker-end: url(#vArr); }
-.viz svg .link.is-hot { stroke: var(--accent); stroke-width: 2.5; }
+.viz svg .link.is-hot, .viz svg .link--hot { stroke: var(--accent); stroke-width: 2.5; marker-end: url(#vArrO); }
+.viz svg .link--soft { stroke: var(--mute); stroke-width: 1.5; stroke-dasharray: 4 5; marker-end: none; }
+.viz svg .link--soft.is-hot { stroke-dasharray: none; }
+.viz svg .tunnel { fill: none; stroke: var(--line); stroke-width: 14; opacity: .7; }
+.viz svg .tunnel.is-hot { stroke: var(--accent-soft); opacity: 1; }
+.viz svg .frame { fill: rgba(111, 159, 234, .06); stroke: var(--accent2); stroke-dasharray: 6 5; }
+.viz svg .is-hot .frame { fill: rgba(243, 156, 78, .10); stroke: var(--accent); stroke-width: 2; stroke-dasharray: none; }
 .viz svg .link.is-draft { stroke: var(--accent2); stroke-dasharray: 5 5; marker-end: url(#vArrB); }
 .viz svg .pk { fill: var(--accent2); }
 .viz svg .chk circle { fill: var(--accent2); }
@@ -257,12 +280,40 @@ html:not(.js) .stage--viz { display: none; }
 .viz svg .lamp--3 { animation-delay: .9s; }
 .viz svg .spin { transform-box: fill-box; transform-origin: center; animation: vSpin 3s linear infinite; }
 .viz svg .spin .ln { stroke-width: 2; }
+.viz svg .spin--slow { animation-duration: 8s; }
+.viz svg .ln--b { stroke-width: 2; }
+.viz svg .ln--dash { stroke-dasharray: 3 4; }
+.viz svg .ln--thin { stroke: var(--line); stroke-width: 1; }
+.viz svg .hole { fill: var(--paper); }
+.viz svg .kc { fill: var(--accent2); stroke-width: 1; }
+.viz svg :is(.cell, .win) { fill: var(--paper); stroke-width: 1; }
+.viz svg .cta { fill: var(--accent2); stroke-width: 1; }
+.viz svg .track { fill: var(--line); stroke-width: 1; }
+.viz svg .grow { fill: var(--accent2); stroke-width: 1; transform-box: fill-box; transform-origin: 0 50%; }
+.viz svg .tick { fill: none; stroke: var(--accent2); stroke-width: 2; }
+.viz svg .eye { fill: var(--ink); stroke: none; }
+.viz svg .knob { fill: var(--accent2); animation: vSlide 2.4s ease-in-out infinite alternate; }
+.viz svg .blink { animation: vBlink .8s ease-in-out infinite; }
+.viz svg :is(.ai, .sign, .q) { stroke: none; text-anchor: middle; font-weight: 800; }
+.viz svg .ai { font-size: .5px; fill: var(--ink); }
+.viz svg .sign { font-size: 10px; fill: var(--ink); }
+.viz svg .q { font-size: 24px; }
+/* 光っている間だけ動くもの */
+.viz svg .is-hot .bob { transform-box: fill-box; animation: vBob 1.4s ease-in-out infinite; }
+.viz svg .lift { transition: transform .35s cubic-bezier(.2, 1.3, .4, 1); }
+.viz svg .lift.is-hot { transform: translateY(-8px); }
 /* 出る・消える・出てくるときの動き */
 .viz svg .is-out { display: none; }
 .viz svg .is-new { transform-box: fill-box; transform-origin: 50% 100%; animation: vPop .6s cubic-bezier(.2, 1.4, .4, 1) both; }
 .viz svg .link.is-new, .viz svg .mon.is-new { animation: vFade .5s ease both; }
 .viz svg .wf { stroke-dasharray: 1; }
 .viz svg .is-new .wf { animation: vDraw 1.1s ease .35s both; }
+/* data-pop の付いたものは、それ自体は動かさず、中の .seq を順に出す */
+.viz svg [data-pop].is-new { animation: none; }
+.viz svg .is-new .seq { transform-box: fill-box; transform-origin: 50% 100%; animation: vPop .5s cubic-bezier(.2, 1.4, .4, 1) var(--d, 0s) both; }
+.viz svg .is-new .late { transform-box: fill-box; transform-origin: center; animation: vPop .4s cubic-bezier(.2, 1.4, .4, 1) 1.1s both; }
+.viz svg .is-new .leave { transform-box: fill-box; animation: vLeave 1.2s ease .2s both; }
+.viz svg .is-new .grow, .viz svg .grow.is-new { animation: vGrow 2.6s ease .3s both; }
 .viz.is-paused svg * { animation-play-state: paused !important; }
 @keyframes vPop { from { opacity: 0; transform: translateY(-14px) scale(.92); } }
 @keyframes vFade { from { opacity: 0; } }
@@ -271,6 +322,10 @@ html:not(.js) .stage--viz { display: none; }
 @keyframes vBlink { 0%, 100% { opacity: .25; } 50% { opacity: 1; } }
 @keyframes vType { 0% { transform: scaleX(0); } 55%, 100% { transform: scaleX(1); } }
 @keyframes vSpin { to { transform: rotate(360deg); } }
+@keyframes vBob { 50% { transform: translateY(-5px); } }
+@keyframes vLeave { to { opacity: 0; transform: translateY(-22px); } }
+@keyframes vGrow { from { transform: scaleX(0); } }
+@keyframes vSlide { to { transform: translateX(12px); } }
 
 /* 下：凡例と、もう一度・一時停止 */
 .viz__foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; margin-top: 8px; }
@@ -306,9 +361,8 @@ html:not(.js) .stage--viz { display: none; }
 .ba li p:last-child { font-size: 13px; font-weight: 700; }
 
 /* 使用技術・仕様 */
-.stack > div, .spec > div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 12px; padding: 10px 0; border-top: 1px solid var(--line); }
-.stack > div:first-child, .spec > div:first-child { border-top: 0; padding-top: 0; }
-.stack > div:last-child, .spec > div:last-child { padding-bottom: 0; }
+.stack > div, .spec > div { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 12px; padding: 10px 8px; margin: 0 -8px; border-radius: 6px; }
+.stack > div + div, .spec > div + div { box-shadow: inset 0 1px 0 var(--line); }
 .stack dt, .spec dt { font-size: 12px; font-weight: 700; color: var(--mute); padding-top: 2px; }
 .stack dd { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
 .stack dd span { padding: 0 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); font-size: 12.5px; font-weight: 500; line-height: 1.9; }
@@ -413,6 +467,7 @@ html:not(.js) .deck__bar, html:not(.js) .deck__cap { display: none; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
+  .viz svg .leave { display: none; }
   .deck__track { scroll-behavior: auto; }
 }
 
